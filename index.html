@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Satsuma Beach · Gümbet, Bodrum · Denize sıfır beach &amp; bar</title>
+<meta name="description" content="Gümbet'in kumsalında bir gün — sabah denizden, gece son şarkıya. Şezlong, kabana, akdeniz mutfağı ve gece 04:00'a uzayan bir bar. Her gün açık · 09:00 — 04:00."/>
+<meta property="og:title" content="Satsuma Beach · Gümbet, Bodrum"/>
+<meta property="og:description" content="Denize sıfır kumsal · Akdeniz mutfağı · 04:00'a uzayan gece"/>
+<meta name="theme-color" content="#0e2640"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Satsuma Beach",
+  "image": "https://images.unsplash.com/photo-1681801457582-de60b2a3ac0e?auto=format&fit=crop&w=1600&q=80",
+  "servesCuisine": ["Mediterranean", "Italian", "Turkish", "Beach Bar"],
+  "priceRange": "₺₺₺",
+  "telephone": "+90 533 578 23 43",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Gümbet, Ethem Kaptan Sk. No:10",
+    "addressLocality": "Bodrum",
+    "addressRegion": "Muğla",
+    "postalCode": "48400",
+    "addressCountry": "TR"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "09:00",
+    "closes": "04:00"
+  }],
+  "sameAs": [
+    "https://www.instagram.com/satsumabeach/",
+    "https://www.facebook.com/satsumabeach"
+  ]
+}
+</script>
+<style>
+:root {
+  --night: #0a1b30;
+  --navy: #0e2640;
+  --aegean: #2b5d8b;
+  --aegean-2: #4a87b7;
+  --sky: #b7d8e9;
+  --sand: #f5ecd6;
+  --linen: #faf3df;
+  --shell: #fffcf3;
+  --sun: #e8b659;
+  --sun-2: #c98f3f;
+  --tangerine: #ee7732;
+  --tangerine-2: #d35d1e;
+  --ink: #0e2640;
+  --ink-soft: rgba(14,38,64,.72);
+  --line: rgba(245,236,214,.18);
+  --line-2: rgba(245,236,214,.08);
+  --line-dark: rgba(14,38,64,.14);
+  --pad: clamp(20px, 5vw, 64px);
+  --max: 1280px;
+  --f-display: "Italiana", "Cormorant Garamond", serif;
+  --f-script: "Cormorant Garamond", serif;
+  --f-body: "Inter", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--f-body); color: var(--ink); background: var(--shell); line-height: 1.7; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+section { padding: clamp(80px, 13vw, 150px) 0; }
+
+/* ─── Top utility bar ─────────────────────────────── */
+.bar { background: var(--night); color: rgba(245,236,214,.6); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; padding: 10px 0; border-bottom: 1px solid var(--line-2); }
+.bar__inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.bar__inner em { font-style: normal; color: var(--sun); }
+.bar__inner a { color: var(--sand); text-decoration: none; }
+.bar__inner a:hover { color: var(--sun); }
+
+/* ─── Nav ─────────────────────────────────────────── */
+.nav { position: sticky; top: 0; z-index: 30; background: rgba(10,27,48,.92); backdrop-filter: blur(14px); padding: 22px 0; border-bottom: 1px solid var(--line); }
+.nav__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { font-family: var(--f-display); font-weight: 400; font-size: 1.8rem; color: var(--sand); text-decoration: none; line-height: 1; letter-spacing: .02em; }
+.brand small { display: block; font-family: var(--f-body); font-style: normal; font-size: .6rem; letter-spacing: .42em; text-transform: uppercase; opacity: .7; margin-top: 7px; color: var(--sun); font-weight: 400; }
+.nav__links { display: flex; gap: 30px; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(245,236,214,.72); }
+.nav__links a { text-decoration: none; transition: color .2s ease; }
+.nav__links a:hover { color: var(--sun); }
+.nav__right { display: flex; align-items: center; gap: 10px; }
+.nav__ig { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 999px; border: 1px solid rgba(245,236,214,.25); color: var(--sand); text-decoration: none; transition: background .2s ease, color .2s ease, border-color .2s ease; }
+.nav__ig:hover { background: var(--sand); color: var(--navy); border-color: var(--sand); }
+.nav__ig svg { width: 18px; height: 18px; }
+.nav__cta { font-size: .76rem; padding: 12px 26px; background: var(--tangerine); color: var(--shell); text-decoration: none; letter-spacing: .14em; text-transform: uppercase; font-weight: 500; border-radius: 999px; transition: background .2s ease; }
+.nav__cta:hover { background: var(--sun); color: var(--navy); }
+
+/* ─── Hero ────────────────────────────────────────── */
+.hero { position: relative; min-height: clamp(680px, 95vh, 940px); display: flex; align-items: center; color: var(--shell); overflow: hidden; background: var(--night); }
+.hero__bg { position: absolute; inset: 0; background-image: linear-gradient(180deg, rgba(10,27,48,.35) 0%, rgba(10,27,48,.6) 60%, rgba(10,27,48,.94) 100%), url('https://images.unsplash.com/photo-1681801457582-de60b2a3ac0e?auto=format&fit=crop&w=2200&q=80'); background-size: cover; background-position: center; }
+.hero__bg::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 30%, rgba(238,119,50,.18), transparent 55%), radial-gradient(ellipse at 80% 75%, rgba(232,182,89,.22), transparent 60%); }
+.hero__inner { position: relative; z-index: 2; width: 100%; }
+.hero__eyebrow { display: inline-flex; align-items: center; gap: 14px; font-size: .72rem; letter-spacing: .36em; text-transform: uppercase; color: var(--sun); margin: 0 0 36px; }
+.hero__eyebrow span.dot { width: 8px; height: 8px; background: var(--tangerine); border-radius: 50%; box-shadow: 0 0 16px var(--tangerine); }
+.hero h1 { font-family: var(--f-display); font-weight: 400; font-size: clamp(2.8rem, 8.4vw, 6.8rem); line-height: 1; margin: 0 0 24px; max-width: 1000px; letter-spacing: -0.005em; color: var(--shell); }
+.hero h1 em { font-family: var(--f-script); font-style: italic; color: var(--sun); font-weight: 400; }
+.hero h1 .tr { display: block; font-family: var(--f-script); font-style: italic; font-size: 0.45em; color: rgba(245,236,214,.72); font-weight: 400; margin-top: 24px; letter-spacing: 0; }
+.hero__sub { font-size: 1.12rem; max-width: 600px; color: rgba(245,236,214,.85); margin: 36px 0 48px; }
+.cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 17px 34px; text-decoration: none; font-size: .82rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; transition: background .2s ease, color .2s ease, transform .2s ease; border-radius: 999px; border: 1px solid transparent; }
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: var(--tangerine); color: var(--shell); }
+.btn-primary:hover { background: var(--sun); color: var(--navy); }
+.btn-ghost { color: var(--sun); border-color: var(--sun); background: transparent; }
+.btn-ghost:hover { background: var(--sun); color: var(--navy); }
+.btn-ig { background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; border-color: transparent; }
+.btn-ig:hover { filter: brightness(1.1); }
+.btn-ig svg { width: 16px; height: 16px; }
+
+.hero__meta { position: relative; z-index: 2; margin-top: clamp(60px, 9vw, 96px); padding-top: 32px; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.hero__meta div { display: flex; flex-direction: column; gap: 6px; }
+.hero__meta dt { font-size: .65rem; letter-spacing: .28em; text-transform: uppercase; color: rgba(245,236,214,.6); }
+.hero__meta dd { margin: 0; font-family: var(--f-display); font-size: 1.55rem; color: var(--sun); line-height: 1.1; }
+
+/* ─── Section heads ───────────────────────────────── */
+.section-head { max-width: 780px; margin: 0 auto 80px; text-align: center; }
+.section-head .eyebrow { font-size: .72rem; letter-spacing: .36em; text-transform: uppercase; color: var(--tangerine); margin: 0 0 20px; }
+.section-head h2 { font-family: var(--f-display); font-weight: 400; font-size: clamp(2.4rem, 5.6vw, 4.2rem); line-height: 1.06; margin: 0 0 22px; letter-spacing: -0.005em; color: var(--ink); }
+.section-head h2 em { font-family: var(--f-script); font-style: italic; color: var(--tangerine); }
+.section-head p { color: var(--ink-soft); max-width: 560px; margin: 0 auto; font-size: 1.05rem; }
+.section-head .ornament { font-family: var(--f-script); font-style: italic; color: var(--tangerine); font-size: 1.6rem; margin: 0 0 12px; line-height: 1; }
+
+/* ─── Konsept (story) ─────────────────────────────── */
+.story { background: var(--linen); position: relative; overflow: hidden; }
+.story::before { content: ''; position: absolute; top: -120px; right: -120px; width: 360px; height: 360px; border-radius: 50%; background: radial-gradient(circle, rgba(238,119,50,.13), transparent 70%); pointer-events: none; }
+.story__grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(48px, 8vw, 110px); align-items: center; position: relative; z-index: 1; }
+.story__text .eyebrow { font-size: .72rem; letter-spacing: .36em; text-transform: uppercase; color: var(--tangerine); margin: 0 0 22px; }
+.story__text h2 { font-family: var(--f-display); font-weight: 400; font-size: clamp(2.2rem, 4.8vw, 3.4rem); line-height: 1.08; margin: 0 0 24px; letter-spacing: -0.005em; color: var(--ink); }
+.story__text h2 em { font-family: var(--f-script); font-style: italic; color: var(--tangerine); }
+.story__text p { color: var(--ink-soft); font-size: 1.08rem; margin: 1em 0; max-width: 520px; }
+.story__text p.lead { font-family: var(--f-script); font-style: italic; font-size: 1.45rem; line-height: 1.4; color: var(--aegean); margin-bottom: 28px; }
+.story__sign { display: flex; gap: 16px; align-items: center; margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--line-dark); }
+.story__sign .glyph { font-family: var(--f-script); font-style: italic; font-size: 2.2rem; color: var(--tangerine); line-height: 1; }
+.story__sign small { font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; color: rgba(14,38,64,.55); }
+.story__image { position: relative; aspect-ratio: 4/5; background-image: linear-gradient(180deg, rgba(10,27,48,.05), rgba(10,27,48,.3)), url('https://images.unsplash.com/photo-1662950267280-0cdf5f7139b4?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center; border-radius: 6px; box-shadow: 0 30px 80px -30px rgba(10,27,48,.5); }
+.story__image::after { content: '"Beach ve denizi çok güzel"'; position: absolute; bottom: -28px; left: -28px; background: var(--navy); color: var(--sun); padding: 18px 26px; font-family: var(--f-script); font-style: italic; font-size: 1.2rem; border-radius: 4px; box-shadow: 0 16px 40px -16px rgba(0,0,0,.4); }
+
+/* ─── A day at Satsuma — timeline ─────────────────── */
+.day { background: var(--night); color: var(--shell); position: relative; overflow: hidden; }
+.day::before { content: ''; position: absolute; top: 50%; left: 0; right: 0; height: 380px; transform: translateY(-50%); background: radial-gradient(ellipse at center, rgba(238,119,50,.12), transparent 70%); pointer-events: none; }
+.day .section-head h2, .day .section-head p { color: var(--shell); }
+.day .section-head h2 em { color: var(--sun); }
+.day .section-head .eyebrow, .day .section-head .ornament { color: var(--sun); }
+.day .section-head p { color: rgba(245,236,214,.75); }
+.day__grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; position: relative; z-index: 2; }
+.tl { padding-top: 28px; border-top: 1px solid rgba(245,236,214,.22); position: relative; }
+.tl::before { content: ''; position: absolute; top: -6px; left: 0; width: 12px; height: 12px; background: var(--tangerine); border-radius: 50%; box-shadow: 0 0 16px var(--tangerine); }
+.tl__time { font-family: var(--f-display); font-size: 1.8rem; color: var(--sun); margin-bottom: 10px; line-height: 1; }
+.tl__title { font-size: .8rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(245,236,214,.9); margin-bottom: 12px; }
+.tl__desc { font-size: .9rem; color: rgba(245,236,214,.68); line-height: 1.55; }
+
+/* ─── Signature trio (dishes/cocktails) ───────────── */
+.trio { background: var(--shell); }
+.trio__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.tile { background: var(--linen); border: 1px solid var(--line-dark); border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; transition: transform .3s ease, box-shadow .3s ease; }
+.tile:hover { transform: translateY(-4px); box-shadow: 0 26px 56px -28px rgba(14,38,64,.35); }
+.tile__img { aspect-ratio: 5/4; background-size: cover; background-position: center; position: relative; }
+.tile__img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(10,27,48,.55)); }
+.tile__badge { position: absolute; top: 18px; left: 18px; background: var(--tangerine); color: var(--shell); font-size: .64rem; letter-spacing: .22em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; font-weight: 500; z-index: 2; }
+.tile__body { padding: 34px 30px 32px; flex: 1; display: flex; flex-direction: column; }
+.tile__num { font-family: var(--f-script); font-style: italic; font-size: 1.1rem; color: var(--tangerine); margin-bottom: 14px; letter-spacing: .14em; }
+.tile h3 { font-family: var(--f-display); font-weight: 400; font-size: 2rem; margin: 0 0 12px; color: var(--ink); line-height: 1.1; }
+.tile__desc { color: var(--ink-soft); font-size: .98rem; margin: 0 0 22px; flex: 1; }
+.tile__price { font-family: var(--f-script); font-style: italic; font-size: 1.2rem; color: var(--tangerine-2); padding-top: 18px; border-top: 1px solid var(--line-dark); display: flex; justify-content: space-between; align-items: center; }
+.tile__price small { font-family: var(--f-body); font-style: normal; font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(14,38,64,.5); }
+
+/* ─── Facilities strip ────────────────────────────── */
+.facilities { background: var(--aegean); color: var(--shell); padding: clamp(56px, 8vw, 88px) 0; }
+.fac__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.fac { padding: 24px; border-left: 1px solid rgba(245,236,214,.25); display: flex; flex-direction: column; gap: 10px; }
+.fac:first-child { border-left: 0; padding-left: 0; }
+.fac__icon { width: 36px; height: 36px; color: var(--sun); }
+.fac h4 { font-family: var(--f-display); font-weight: 400; font-size: 1.5rem; margin: 4px 0 4px; color: var(--shell); }
+.fac p { color: rgba(245,236,214,.78); font-size: .92rem; margin: 0; }
+
+/* ─── Menu ────────────────────────────────────────── */
+.menu { background: var(--linen); }
+.menu__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; max-width: 1080px; margin: 0 auto; }
+.menu__col h3 { font-family: var(--f-display); font-weight: 400; font-size: 2.1rem; margin: 0 0 28px; color: var(--tangerine-2); position: relative; padding-bottom: 14px; border-bottom: 1px solid var(--line-dark); }
+.menu__col h3 .price-from { float: right; font-family: var(--f-body); font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(14,38,64,.5); margin-top: 18px; font-weight: 400; }
+.menu__item { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 16px 0; border-bottom: 1px dashed var(--line-dark); }
+.menu__item:last-child { border-bottom: 0; }
+.menu__item-name { font-weight: 500; font-size: 1rem; color: var(--ink); }
+.menu__item-name small { display: block; font-weight: 400; font-size: .85rem; color: var(--ink-soft); margin-top: 4px; font-style: italic; }
+.menu__item-price { font-family: var(--f-script); font-style: italic; font-size: 1.35rem; color: var(--tangerine-2); white-space: nowrap; }
+.menu__note { text-align: center; margin-top: 56px; font-size: .9rem; color: rgba(14,38,64,.55); font-style: italic; }
+
+/* ─── Gallery ─────────────────────────────────────── */
+.gallery { background: var(--shell); padding: 0; }
+.gallery__head { display: flex; justify-content: space-between; align-items: end; gap: 24px; padding: clamp(56px, 8vw, 96px) var(--pad) 36px; max-width: var(--max); margin: 0 auto; flex-wrap: wrap; }
+.gallery__head h3 { font-family: var(--f-display); font-weight: 400; font-size: clamp(1.8rem, 3.6vw, 2.8rem); margin: 0; color: var(--ink); line-height: 1.1; }
+.gallery__head h3 em { font-family: var(--f-script); font-style: italic; color: var(--tangerine); }
+.gallery__head .eyebrow { font-size: .7rem; letter-spacing: .32em; text-transform: uppercase; color: var(--tangerine); margin: 0 0 10px; }
+.gallery__head a { display: inline-flex; align-items: center; gap: 10px; padding: 12px 22px; background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; text-decoration: none; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 500; border-radius: 999px; transition: filter .2s ease, transform .2s ease; }
+.gallery__head a:hover { filter: brightness(1.1); transform: translateY(-1px); }
+.gallery__head a svg { width: 16px; height: 16px; }
+.gallery__strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; height: clamp(220px, 28vw, 360px); }
+.gallery__cell { background-size: cover; background-position: center; position: relative; overflow: hidden; }
+.gallery__cell::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(10,27,48,.55)); }
+.gallery__cell span { position: absolute; left: 24px; bottom: 22px; color: var(--shell); font-family: var(--f-script); font-style: italic; font-size: 1.2rem; z-index: 2; opacity: .95; }
+
+/* ─── Reviews ─────────────────────────────────────── */
+.reviews { background: var(--linen); }
+.reviews__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 1080px; margin: 0 auto; }
+.quote { padding: 36px 32px; background: var(--shell); border-top: 3px solid var(--tangerine); position: relative; border-radius: 4px; }
+.quote::before { content: '"'; position: absolute; top: 12px; right: 24px; font-family: var(--f-script); font-style: italic; font-size: 5rem; color: var(--tangerine); opacity: .25; line-height: 1; }
+.quote p { font-family: var(--f-script); font-style: italic; font-size: 1.16rem; line-height: 1.5; margin: 0 0 26px; color: var(--ink); }
+.quote footer { font-size: .76rem; letter-spacing: .16em; text-transform: uppercase; color: rgba(14,38,64,.55); }
+.quote footer strong { color: var(--tangerine-2); font-weight: 500; letter-spacing: .12em; }
+
+/* ─── Visit ───────────────────────────────────────── */
+.visit { background: var(--navy); color: var(--shell); position: relative; overflow: hidden; }
+.visit::before, .visit::after { content: ''; position: absolute; width: 320px; height: 320px; border-radius: 50%; pointer-events: none; }
+.visit::before { top: -100px; left: -100px; background: radial-gradient(circle, rgba(238,119,50,.16), transparent 65%); }
+.visit::after { bottom: -120px; right: -100px; background: radial-gradient(circle, rgba(232,182,89,.14), transparent 70%); }
+.visit__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 7vw, 100px); position: relative; z-index: 2; align-items: start; }
+.visit__copy .eyebrow { font-size: .72rem; letter-spacing: .36em; text-transform: uppercase; color: var(--sun); margin: 0 0 22px; }
+.visit__copy h2 { font-family: var(--f-display); font-weight: 400; font-size: clamp(2.2rem, 4.6vw, 3.4rem); line-height: 1.08; margin: 0 0 22px; color: var(--shell); }
+.visit__copy h2 em { font-family: var(--f-script); font-style: italic; color: var(--sun); }
+.visit__copy p { color: rgba(245,236,214,.8); font-size: 1.05rem; max-width: 460px; margin: 0 0 32px; }
+.visit__copy .cta-row .btn-ghost { color: var(--sun); border-color: var(--sun); }
+.visit__copy .cta-row .btn-ghost:hover { background: var(--sun); color: var(--navy); }
+.visit__panel { background: rgba(10,27,48,.55); border: 1px solid var(--line); padding: 40px; border-radius: 6px; backdrop-filter: blur(6px); }
+.visit__panel h4 { font-family: var(--f-display); font-weight: 400; font-size: 1.7rem; margin: 0 0 4px; color: var(--sun); }
+.visit__panel small { font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: rgba(245,236,214,.6); display: block; margin-bottom: 28px; }
+.visit__panel dl { display: grid; grid-template-columns: 1fr; gap: 0; margin: 0; }
+.visit__panel dl > div { display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.visit__panel dl > div:last-child { border-bottom: 0; padding-bottom: 0; }
+.visit__panel dt { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(245,236,214,.55); padding-top: 4px; }
+.visit__panel dd { margin: 0; font-family: var(--f-script); font-style: italic; font-size: 1.18rem; color: var(--sun); text-align: right; line-height: 1.4; }
+.visit__panel dd small { font-family: var(--f-body); font-style: normal; font-size: .72rem; letter-spacing: .14em; color: rgba(245,236,214,.55); display: block; margin-top: 2px; }
+
+/* ─── Final CTA ───────────────────────────────────── */
+.final { background: linear-gradient(180deg, var(--night) 0%, var(--navy) 100%); color: var(--shell); text-align: center; position: relative; overflow: hidden; }
+.final::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(180deg, rgba(10,27,48,.78), rgba(10,27,48,.94)), url('https://images.unsplash.com/photo-1681801457582-de60b2a3ac0e?auto=format&fit=crop&w=2000&q=80'); background-size: cover; background-position: center; }
+.final__inner { position: relative; z-index: 2; }
+.final .ornament { font-family: var(--f-script); font-style: italic; color: var(--sun); font-size: 1.6rem; margin: 0 0 18px; }
+.final h2 { font-family: var(--f-display); font-weight: 400; font-size: clamp(2.6rem, 6.4vw, 4.6rem); line-height: 1.05; margin: 0 auto 22px; max-width: 880px; color: var(--shell); }
+.final h2 em { font-family: var(--f-script); font-style: italic; color: var(--sun); }
+.final p { color: rgba(245,236,214,.82); font-size: 1.08rem; margin: 0 auto 44px; max-width: 540px; }
+.final .btn-primary { background: var(--tangerine); color: var(--shell); }
+.final .btn-primary:hover { background: var(--sun); color: var(--navy); }
+.final .btn-ghost { color: var(--sun); border-color: var(--sun); }
+.final .btn-ghost:hover { background: var(--sun); color: var(--navy); }
+
+/* ─── Foot ────────────────────────────────────────── */
+.foot { background: var(--night); color: rgba(245,236,214,.6); padding: 56px 0 28px; font-size: .86rem; }
+.foot__grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px; margin-bottom: 36px; }
+.foot__brand { font-family: var(--f-display); font-size: 1.8rem; color: var(--sun); margin-bottom: 12px; line-height: 1; }
+.foot__brand small { display: block; font-family: var(--f-body); font-size: .6rem; letter-spacing: .42em; text-transform: uppercase; margin-top: 8px; color: var(--sand); opacity: .7; font-weight: 400; }
+.foot__col h5 { font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; color: var(--sun); margin: 0 0 14px; font-weight: 500; }
+.foot__col p, .foot__col a { color: rgba(245,236,214,.62); text-decoration: none; display: block; margin: 4px 0; }
+.foot__col a:hover { color: var(--sun); }
+.foot__socials { display: flex; gap: 10px; margin-top: 12px; }
+.foot__socials a { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid rgba(245,236,214,.25); border-radius: 999px; color: var(--sand); }
+.foot__socials a:hover { background: var(--sun); color: var(--navy); border-color: var(--sun); }
+.foot__socials svg { width: 16px; height: 16px; }
+.foot__bar { display: flex; justify-content: space-between; gap: 16px; padding-top: 24px; border-top: 1px solid var(--line-2); font-size: .78rem; flex-wrap: wrap; }
+
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .9s ease, transform .9s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+@media (max-width: 980px) {
+  .nav__links { display: none; }
+  .story__grid, .visit__grid, .menu__grid { grid-template-columns: 1fr; }
+  .trio__grid, .reviews__grid { grid-template-columns: 1fr; }
+  .day__grid, .fac__grid { grid-template-columns: 1fr 1fr; }
+  .gallery__strip { grid-template-columns: 1fr 1fr; height: auto; }
+  .gallery__cell { aspect-ratio: 4/3; }
+  .foot__grid { grid-template-columns: 1fr; }
+  .hero__meta { grid-template-columns: 1fr 1fr; gap: 18px; }
+  .fac { border-left: 0; padding-left: 0; border-top: 1px solid rgba(245,236,214,.2); padding-top: 18px; }
+  .fac:first-child { border-top: 0; padding-top: 0; }
+  .story__image::after { left: 16px; bottom: -22px; font-size: 1rem; padding: 14px 20px; }
+}
+@media (max-width: 560px) {
+  .day__grid, .fac__grid { grid-template-columns: 1fr; }
+  .bar__inner { font-size: .68rem; gap: 8px; }
+}
+@media (prefers-reduced-motion: reduce) { *, ::before, ::after { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+
+<!-- Utility bar -->
+<div class="bar">
+  <div class="wrap bar__inner">
+    <span><em>● Açık</em> · Her gün 09:00 — 04:00</span>
+    <span>Gümbet · Ethem Kaptan Sk. · <a href="tel:+905335782343">0533 578 23 43</a></span>
+  </div>
+</div>
+
+<!-- Nav -->
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="#top">Satsuma Beach<small>Gümbet · Bodrum</small></a>
+    <nav class="nav__links" aria-label="Bölümler">
+      <a href="#konsept">Konsept</a>
+      <a href="#gun">Bir Gün</a>
+      <a href="#sofra">Sofra</a>
+      <a href="#menu">Menü</a>
+      <a href="#ziyaret">Ziyaret</a>
+    </nav>
+    <div class="nav__right">
+      <a class="nav__ig" href="https://www.instagram.com/satsumabeach/" target="_blank" rel="noopener" aria-label="Instagram'da Satsuma Beach">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+      </a>
+      <a class="nav__cta" href="https://wa.me/905335782343" target="_blank" rel="noopener">Rezervasyon</a>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="top">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="wrap hero__inner">
+    <p class="hero__eyebrow"><span class="dot"></span> Gümbet · Ethem Kaptan · Denize Sıfır Beach &amp; Bar</p>
+    <h1>Sabah <em>denizden,</em><br/>gece <em>son şarkıya.</em>
+      <span class="tr">— Gümbet'in kumsalında uzayıp giden bir Bodrum günü.</span>
+    </h1>
+    <p class="hero__sub">Satsuma Beach, Gümbet koyunun ince kumlu sahilinde; günün her ışığına yer açan bir kumsal kulübü. Sabah kahvaltı, öğleden sonra şezlong, gün batımına özel kokteyl, gece 04:00'a uzayan bir bar.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://wa.me/905335782343" target="_blank" rel="noopener">Şezlong &amp; Masa Rezerve Et</a>
+      <a class="btn btn-ghost" href="#menu">Menüyü Gör</a>
+      <a class="btn btn-ig" href="https://www.instagram.com/satsumabeach/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+        Instagram
+      </a>
+    </div>
+    <dl class="hero__meta">
+      <div><dt>Konsept</dt><dd>Beach &amp; Bar</dd></div>
+      <div><dt>Saatler</dt><dd>09:00 — 04:00</dd></div>
+      <div><dt>Sahil</dt><dd>Ethem Kaptan</dd></div>
+      <div><dt>Kişi başı</dt><dd>₺200 — 800</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- Konsept -->
+<section class="story" id="konsept">
+  <div class="wrap story__grid">
+    <div class="story__text reveal">
+      <span class="eyebrow">Konsept</span>
+      <h2>Bir <em>kumsal</em>, bir gün, üç farklı <em>ışık.</em></h2>
+      <p class="lead">"Sabah denize giriyorsun, öğleden sonra şezlongda; akşam üstü gün batımı kokteyli, gece müziğin temposu."</p>
+      <p>Satsuma Beach, Gümbet'in dingin kuzey koyunda; kumun denizle birleştiği o ince çizgide kurulu. Şezlonglar arası geniş, gölge bol, su açık mavi; öğle yemeğinde Akdeniz mutfağından sade tabaklar, akşam üstü taze meyveli kokteyller, gece bardak elinde uzayan sohbetler.</p>
+      <p>Beş yıldız değiliz; ama bir kumsalın size verebileceği en güzel günü vermek için varız. Geliyorsunuz, kalıyorsunuz, kalkmak istemiyorsunuz.</p>
+      <div class="story__sign">
+        <span class="glyph">~</span>
+        <small>Satsuma Ekibi · Gümbet</small>
+      </div>
+    </div>
+    <div class="story__image reveal" role="img" aria-label="Sahilde gün batımı manzarası"></div>
+  </div>
+</section>
+
+<!-- Bir gün — timeline -->
+<section class="day" id="gun">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="ornament">~ ✦ ~</p>
+      <span class="eyebrow">Bir Satsuma Günü</span>
+      <h2>Sabah 09:00, gece <em>04:00.</em></h2>
+      <p>Burada saatler denizin ışığına göre akar; sabah kahvaltıyla açılır, gece son kokteylle kapanır.</p>
+    </header>
+    <div class="day__grid">
+      <div class="tl reveal">
+        <div class="tl__time">09:00</div>
+        <div class="tl__title">Sabah Kumsalı</div>
+        <p class="tl__desc">İlk şezlonglar açılır, kahvaltı tabakları gelir, deniz hâlâ serin.</p>
+      </div>
+      <div class="tl reveal">
+        <div class="tl__time">13:00</div>
+        <div class="tl__title">Öğle Sofrası</div>
+        <p class="tl__desc">İnce hamur pizza, ev usulü makarna, soğuk taze meyve suyu.</p>
+      </div>
+      <div class="tl reveal">
+        <div class="tl__time">17:00</div>
+        <div class="tl__title">Altın Saat</div>
+        <p class="tl__desc">Güneş alçalır, bar açılır, ilk gün batımı kokteyli servis edilir.</p>
+      </div>
+      <div class="tl reveal">
+        <div class="tl__time">21:00</div>
+        <div class="tl__title">Akşam Yemeği</div>
+        <p class="tl__desc">Sahilde mum ışığı, ızgara balık, beyaz şarap. Müzik yumuşak başlar.</p>
+      </div>
+      <div class="tl reveal">
+        <div class="tl__time">04:00</div>
+        <div class="tl__title">Son Şarkı</div>
+        <p class="tl__desc">DJ sona yaklaşır; son kokteyl, son kahkaha, kuma uzanan ayak izi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Signature trio -->
+<section class="trio" id="sofra">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="ornament">~ ✦ ~</p>
+      <span class="eyebrow">Sofra &amp; Bar</span>
+      <h2>Üç imza, bir <em>kumsal.</em></h2>
+      <p>Akdeniz mutfağından sade ama doğru tabaklar; barın arkasında taze sıkım meyve sularıyla yapılan kokteyller.</p>
+    </header>
+    <div class="trio__grid">
+      <article class="tile reveal">
+        <div class="tile__img" style="background-image: linear-gradient(180deg, rgba(0,0,0,.0), rgba(0,0,0,.35)), url('https://images.unsplash.com/photo-1702716059239-385baacdabdc?auto=format&fit=crop&w=1100&q=80');" role="img" aria-label="İnce hamur pizza">
+          <span class="tile__badge">Popüler</span>
+        </div>
+        <div class="tile__body">
+          <div class="tile__num">— I.</div>
+          <h3>İnce Hamur Pizza</h3>
+          <p class="tile__desc">Taş fırında, San Marzano sosu üzerinde mozzarella ve taze fesleyenle; öğle yemeğinin en hafif yolu.</p>
+          <div class="tile__price"><span>₺240'tan</span><small>Margherita · Quattro · Diavola</small></div>
+        </div>
+      </article>
+
+      <article class="tile reveal">
+        <div class="tile__img" style="background-image: linear-gradient(180deg, rgba(0,0,0,.0), rgba(0,0,0,.35)), url('https://images.unsplash.com/photo-1650835750769-79eed4a3fe84?auto=format&fit=crop&w=1100&q=80');" role="img" aria-label="Gün batımı kokteyli">
+          <span class="tile__badge">İmza</span>
+        </div>
+        <div class="tile__body">
+          <div class="tile__num">— II.</div>
+          <h3>Satsuma Sunset</h3>
+          <p class="tile__desc">Mandalina ve frenk soğanı reçeli, beyaz rom, taze limon, biraz tuz. Adını mekânımızdan alan, gün batımına eşlik eden imza kokteyl.</p>
+          <div class="tile__price"><span>₺320</span><small>Tek kişilik · Mandalina garnitür</small></div>
+        </div>
+      </article>
+
+      <article class="tile reveal">
+        <div class="tile__img" style="background-image: linear-gradient(180deg, rgba(0,0,0,.0), rgba(0,0,0,.35)), url('https://images.unsplash.com/photo-1777333033313-e6d72e7fadc5?auto=format&fit=crop&w=1100&q=80');" role="img" aria-label="Ev usulü makarna">
+          <span class="tile__badge">Klasik</span>
+        </div>
+        <div class="tile__body">
+          <div class="tile__num">— III.</div>
+          <h3>Penne Arrabbiata</h3>
+          <p class="tile__desc">Acı biber, sarımsak, San Marzano domatesi ve taze maydanoz. Sade, doğru pişmiş, deniz kenarına yakışan bir tabak.</p>
+          <div class="tile__price"><span>₺280</span><small>Tek porsiyon · Parmesan opsiyonel</small></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Facilities -->
+<section class="facilities">
+  <div class="wrap fac__grid">
+    <div class="fac">
+      <svg class="fac__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg>
+      <h4>Şezlong &amp; Kabana</h4>
+      <p>Geniş gölgelikler, çift kişilik kabanalar, taze havlu servisi. Rezervasyon önerilir.</p>
+    </div>
+    <div class="fac">
+      <svg class="fac__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-6 10-6 10 6 10 6-3 6-10 6-10-6-10-6z"/><path d="M5 14c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2"/></svg>
+      <h4>Denize Sıfır</h4>
+      <p>Şezlongdan denize üç adım; ince kum, sığ giriş. Çocuklu aileler için güvenli kıyı.</p>
+    </div>
+    <div class="fac">
+      <svg class="fac__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l-3 11H8L5 7z"/><path d="M5 7l-1-3h16l-1 3"/><path d="M12 10v5"/></svg>
+      <h4>Sahilde Bar</h4>
+      <p>Taze sıkım kokteyller, soğuk beyaz şarap, çıtır mezeler. 17:00'den sonra bar tam tempoda.</p>
+    </div>
+    <div class="fac">
+      <svg class="fac__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+      <h4>Gece 04:00'a Müzik</h4>
+      <p>Akşam yumuşak başlar, gece DJ'le hızlanır. Hafta sonu özel sunum gecesi.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Menu -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="ornament">~ ✦ ~</p>
+      <span class="eyebrow">Menü</span>
+      <h2>Sahil sofrası, <em>sahil</em> bar kartı.</h2>
+      <p>Akdeniz mutfağı + Türk klasikleri + bar — sezona göre küçük değişimler.</p>
+    </header>
+
+    <div class="menu__grid">
+      <div class="menu__col">
+        <h3>Mutfaktan <span class="price-from">Öğle &amp; akşam</span></h3>
+        <div class="menu__item">
+          <div class="menu__item-name">Margherita Pizza <small>San Marzano · mozzarella · fesleğen</small></div>
+          <div class="menu__item-price">₺240</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-name">Quattro Formaggi <small>Dört peynirli · ince hamur</small></div>
+          <div class="menu__item-price">₺320</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-name">Penne Arrabbiata <small>Acılı domates · maydanoz</small></div>
+          <div class="menu__item-price">₺280</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-name">Izgara Levrek <small>Limon · zeytinyağı · sahil yeşilliği</small></div>
+          <div class="menu__item-price">₺580</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-name">Akdeniz Salatası <small>Karışık yeşillik · feta · zeytin</small></div>
+          <div class="menu__item-price">₺220</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-name">Üç Gözleme <small>Peynirli · ıspanaklı · patatesli</small></div>
+          <div class="menu__item-price">₺180</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-name">Serpme Kahvaltı <small>2 kişilik · 09:00 — 12:00</small></div>
+          <div class="menu__item-price">₺680</div>
+        </div>
+      </div>
+
+      <div class="menu__col">
+        <h3>Bar &amp; İçecek <span class="price-from">15:00 sonrası</span></h3>
+        <div class="menu__item">
+          <div class="menu__item-name">Satsuma Sunset <small>İmza · mandalina · rom</small></div>
+          <div class="menu__item-price">₺320</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-name">Aperol Spritz</div>
+          <div class="menu__item-price">₺280</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-name">Mojito <small>Klasik veya frenk üzümlü</small></div>
+          <div class="menu__item-price">₺260</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-name">Beyaz Şarap (kadeh) <small>Yerli &amp; ithal seçenekler</small></div>
+          <div class="menu__item-price">₺180</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-name">Taze Sıkım Meyve Suyu</div>
+          <div class="menu__item-price">₺95</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-name">Türk Kahvesi · Bakır Cezve</div>
+          <div class="menu__item-price">₺55</div>
+        </div>
+        <h3 style="margin-top:48px;">Tatlı &amp; Atıştırmalık <span class="price-from">Bütün gün</span></h3>
+        <div class="menu__item">
+          <div class="menu__item-name">Limonlu Cheesecake</div>
+          <div class="menu__item-price">₺160</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-name">Tiramisu</div>
+          <div class="menu__item-price">₺160</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-name">Patates Kızartması · Çıtır</div>
+          <div class="menu__item-price">₺120</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="menu__note">Fiyatlar KDV dahildir · Vejetaryen ve glutensiz seçenekler için ekibimize sorabilirsiniz.</p>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="gallery" aria-label="Satsuma Beach'ten kareler">
+  <div class="gallery__head">
+    <div>
+      <p class="eyebrow">@satsumabeach</p>
+      <h3>Sahilden <em>kareler</em> — daha fazlası Instagram'da.</h3>
+    </div>
+    <a href="https://www.instagram.com/satsumabeach/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="5" ry="5"/>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+      </svg>
+      Instagram'da Takip Et
+    </a>
+  </div>
+  <div class="gallery__strip">
+    <div class="gallery__cell" style="background-image: url('https://images.unsplash.com/photo-1646825864255-8c7b916b45d1?auto=format&fit=crop&w=800&q=80');"><span>Deniz</span></div>
+    <div class="gallery__cell" style="background-image: url('https://images.unsplash.com/photo-1654517319978-b578e907f4de?auto=format&fit=crop&w=800&q=80');"><span>Şezlong</span></div>
+    <div class="gallery__cell" style="background-image: url('https://images.unsplash.com/photo-1677517497394-87d635cf7e10?auto=format&fit=crop&w=800&q=80');"><span>Bar</span></div>
+    <div class="gallery__cell" style="background-image: url('https://images.unsplash.com/photo-1693625656620-e2ffa01fa81a?auto=format&fit=crop&w=800&q=80');"><span>Gün Batımı</span></div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="reviews" id="yorumlar">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="ornament">~ ✦ ~</p>
+      <span class="eyebrow">Misafirlerden</span>
+      <h2>Sahile vuran <em>sözler.</em></h2>
+      <p>Konuklarımızın en sık tekrarladığı üç hissiyat: deniz, anlayışlı ekip, uzun bir gün.</p>
+    </header>
+    <div class="reviews__grid">
+      <blockquote class="quote reveal">
+        <p>Yemekler güzel, çalışan arkadaşlar gayet anlayışlı. Beach ve denizi çok güzel — uzun bir gün geçirmek için doğru yer.</p>
+        <footer><strong>Dilara K.</strong> · Bodrum ziyareti</footer>
+      </blockquote>
+      <blockquote class="quote reveal">
+        <p>Gümbet'in en sakin koyunda; sabah denize girip, öğleden sonra şezlongda kitap okuyup, akşam üstü kokteyl içtik. Tek bir mekânda bir bütün gün.</p>
+        <footer><strong>Misafirimiz</strong> · Yaz sezonu</footer>
+      </blockquote>
+      <blockquote class="quote reveal">
+        <p>Gün batımı kokteyli ile mandalina dilimini birlikte yudumlamak — Bodrum'da bizim için en güzel saat oldu.</p>
+        <footer><strong>Çift</strong> · Hafta sonu</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- Visit -->
+<section class="visit" id="ziyaret">
+  <div class="wrap visit__grid">
+    <div class="visit__copy reveal">
+      <span class="eyebrow">Ziyaret</span>
+      <h2>Bir gün <em>gelin,</em><br/>sahili size emanet edelim.</h2>
+      <p>Hafta sonları şezlongumuz erken dolar — gece için masa rezervasyonu da önceden alınır. WhatsApp hattımız her gün 09:00 sonrası açık, ortalama 30 dakikada cevap veriyoruz.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://wa.me/905335782343" target="_blank" rel="noopener">WhatsApp ile Rezerve Et</a>
+        <a class="btn btn-ghost" href="tel:+905335782343">0533 578 23 43</a>
+      </div>
+    </div>
+    <aside class="visit__panel reveal">
+      <h4>Satsuma Beach</h4>
+      <small>Gümbet · Ethem Kaptan</small>
+      <dl>
+        <div><dt>Adres</dt><dd>Ethem Kaptan Sk. No:10<small>Gümbet, 48400 Bodrum/Muğla</small></dd></div>
+        <div><dt>Saatler</dt><dd>Her gün · 09:00 — 04:00<small>Mutfak kapanış 23:30, bar 03:45</small></dd></div>
+        <div><dt>Sezon</dt><dd>Mayıs — Ekim<small>Hava şartlarına göre</small></dd></div>
+        <div><dt>Servis</dt><dd>İçeride · Arabaya · Temassız<small>Paket sipariş aktif</small></dd></div>
+        <div><dt>Telefon</dt><dd>0533 578 23 43</dd></div>
+        <div><dt>Instagram</dt><dd>@satsumabeach</dd></div>
+        <div><dt>Facebook</dt><dd>satsumabeach</dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final">
+  <div class="final__inner wrap">
+    <p class="ornament">~ ✦ ~</p>
+    <h2>Bir gün <em>burada</em> geçsin —<br/>kalanı denize bırakın.</h2>
+    <p>Sahil hazır, şezlong serili, ocak yanıyor; bar açık. Yapmanız gereken tek şey gün doğmadan rezervasyonu almak.</p>
+    <div class="cta-row" style="justify-content:center;">
+      <a class="btn btn-primary" href="https://wa.me/905335782343" target="_blank" rel="noopener">WhatsApp · Rezerve Et</a>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Satsuma+Beach+Gumbet+Bodrum" target="_blank" rel="noopener">Yol Tarifi</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div>
+        <div class="foot__brand">Satsuma Beach<small>Gümbet · Bodrum</small></div>
+        <p style="max-width:380px; margin-top:14px;">Gümbet'in ince kumlu kuzey koyunda denize sıfır beach &amp; bar. Sabah kahvaltıdan gece 04:00'a uzayan bir gün.</p>
+        <div class="foot__socials">
+          <a href="https://www.instagram.com/satsumabeach/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/satsumabeach" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="foot__col">
+        <h5>Satsuma</h5>
+        <a href="#konsept">Konsept</a>
+        <a href="#gun">Bir Gün</a>
+        <a href="#sofra">Sofra &amp; Bar</a>
+        <a href="#menu">Menü</a>
+        <a href="#yorumlar">Yorumlar</a>
+      </div>
+      <div class="foot__col">
+        <h5>İletişim</h5>
+        <a href="tel:+905335782343">0533 578 23 43</a>
+        <a href="https://wa.me/905335782343" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.instagram.com/satsumabeach/" target="_blank" rel="noopener">@satsumabeach</a>
+        <p>Ethem Kaptan Sk. No:10, Gümbet</p>
+      </div>
+    </div>
+    <div class="foot__bar">
+      <span>© 2026 Satsuma Beach · Tüm hakları saklıdır.</span>
+      <span>Her gün · 09:00 — 04:00</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((es) => {
+  es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
