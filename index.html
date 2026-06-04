@@ -16,7 +16,7 @@
   "@context": "https://schema.org",
   "@type": "Restaurant",
   "name": "Satsuma Beach",
-  "image": "https://images.unsplash.com/photo-1681801457582-de60b2a3ac0e?auto=format&fit=crop&w=1600&q=80",
+  "image": "images/amb-tabela.jpg",
   "servesCuisine": ["Mediterranean", "Italian", "Turkish", "Beach Bar"],
   "priceRange": "₺₺₺",
   "telephone": "+90 533 578 23 43",
@@ -97,7 +97,7 @@ section { padding: clamp(80px, 13vw, 150px) 0; }
 
 /* ─── Hero ────────────────────────────────────────── */
 .hero { position: relative; min-height: clamp(680px, 95vh, 940px); display: flex; align-items: center; color: var(--shell); overflow: hidden; background: var(--night); }
-.hero__bg { position: absolute; inset: 0; background-image: linear-gradient(180deg, rgba(10,27,48,.35) 0%, rgba(10,27,48,.6) 60%, rgba(10,27,48,.94) 100%), url('https://images.unsplash.com/photo-1681801457582-de60b2a3ac0e?auto=format&fit=crop&w=2200&q=80'); background-size: cover; background-position: center; }
+.hero__bg { position: absolute; inset: 0; background-image: linear-gradient(180deg, rgba(10,27,48,.35) 0%, rgba(10,27,48,.6) 60%, rgba(10,27,48,.94) 100%), url('images/amb-tabela.jpg'); background-size: cover; background-position: center; }
 .hero__bg::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 30%, rgba(238,119,50,.18), transparent 55%), radial-gradient(ellipse at 80% 75%, rgba(232,182,89,.22), transparent 60%); }
 .hero__inner { position: relative; z-index: 2; width: 100%; }
 .hero__eyebrow { display: inline-flex; align-items: center; gap: 14px; font-size: .72rem; letter-spacing: .36em; text-transform: uppercase; color: var(--sun); margin: 0 0 36px; }
@@ -142,7 +142,7 @@ section { padding: clamp(80px, 13vw, 150px) 0; }
 .story__sign { display: flex; gap: 16px; align-items: center; margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--line-dark); }
 .story__sign .glyph { font-family: var(--f-script); font-style: italic; font-size: 2.2rem; color: var(--tangerine); line-height: 1; }
 .story__sign small { font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; color: rgba(14,38,64,.55); }
-.story__image { position: relative; aspect-ratio: 4/5; background-image: linear-gradient(180deg, rgba(10,27,48,.05), rgba(10,27,48,.3)), url('https://images.unsplash.com/photo-1662950267280-0cdf5f7139b4?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center; border-radius: 6px; box-shadow: 0 30px 80px -30px rgba(10,27,48,.5); }
+.story__image { position: relative; aspect-ratio: 4/5; background-image: linear-gradient(180deg, rgba(10,27,48,.05), rgba(10,27,48,.3)), url('images/amb-salon.jpg'); background-size: cover; background-position: center; border-radius: 6px; box-shadow: 0 30px 80px -30px rgba(10,27,48,.5); }
 .story__image::after { content: '"Beach ve denizi çok güzel"'; position: absolute; bottom: -28px; left: -28px; background: var(--navy); color: var(--sun); padding: 18px 26px; font-family: var(--f-script); font-style: italic; font-size: 1.2rem; border-radius: 4px; box-shadow: 0 16px 40px -16px rgba(0,0,0,.4); }
 
 /* ─── A day at Satsuma — timeline ─────────────────── */
@@ -242,7 +242,7 @@ section { padding: clamp(80px, 13vw, 150px) 0; }
 
 /* ─── Final CTA ───────────────────────────────────── */
 .final { background: linear-gradient(180deg, var(--night) 0%, var(--navy) 100%); color: var(--shell); text-align: center; position: relative; overflow: hidden; }
-.final::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(180deg, rgba(10,27,48,.78), rgba(10,27,48,.94)), url('https://images.unsplash.com/photo-1681801457582-de60b2a3ac0e?auto=format&fit=crop&w=2000&q=80'); background-size: cover; background-position: center; }
+.final::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(180deg, rgba(10,27,48,.78), rgba(10,27,48,.94)), url('images/amb-cardak.jpg'); background-size: cover; background-position: center; }
 .final__inner { position: relative; z-index: 2; }
 .final .ornament { font-family: var(--f-script); font-style: italic; color: var(--sun); font-size: 1.6rem; margin: 0 0 18px; }
 .final h2 { font-family: var(--f-display); font-weight: 400; font-size: clamp(2.6rem, 6.4vw, 4.6rem); line-height: 1.05; margin: 0 auto 22px; max-width: 880px; color: var(--shell); }
@@ -303,7 +303,7 @@ section { padding: clamp(80px, 13vw, 150px) 0; }
 <!-- Nav -->
 <header class="nav">
   <div class="wrap nav__inner">
-    <a class="brand" href="#top">Satsuma Beach<small>Gümbet · Bodrum</small></a>
+    <a class="brand" href="#top" aria-label="Satsuma Beach"><img src="images/logo.png" alt="Satsuma Beach & Restaurant" style="height:46px;width:auto;display:block;background:var(--shell);padding:7px 12px;border-radius:10px"/></a>
     <nav class="nav__links" aria-label="Bölümler">
       <a href="#konsept">Konsept</a>
       <a href="#gun">Bir Gün</a>
@@ -422,7 +422,7 @@ section { padding: clamp(80px, 13vw, 150px) 0; }
     </header>
     <div class="trio__grid">
       <article class="tile reveal">
-        <div class="tile__img" style="background-image: linear-gradient(180deg, rgba(0,0,0,.0), rgba(0,0,0,.35)), url('https://images.unsplash.com/photo-1702716059239-385baacdabdc?auto=format&fit=crop&w=1100&q=80');" role="img" aria-label="İnce hamur pizza">
+        <div class="tile__img" style="background-image: linear-gradient(180deg, rgba(0,0,0,.0), rgba(0,0,0,.35)), url('images/amb-bar.jpg');" role="img" aria-label="Satsuma Beach bar ve oturma alanı">
           <span class="tile__badge">Popüler</span>
         </div>
         <div class="tile__body">
@@ -434,7 +434,7 @@ section { padding: clamp(80px, 13vw, 150px) 0; }
       </article>
 
       <article class="tile reveal">
-        <div class="tile__img" style="background-image: linear-gradient(180deg, rgba(0,0,0,.0), rgba(0,0,0,.35)), url('https://images.unsplash.com/photo-1650835750769-79eed4a3fe84?auto=format&fit=crop&w=1100&q=80');" role="img" aria-label="Gün batımı kokteyli">
+        <div class="tile__img" style="background-image: linear-gradient(180deg, rgba(0,0,0,.0), rgba(0,0,0,.35)), url('images/amb-tezgah.jpg');" role="img" aria-label="Bar tezgahı ve deniz manzarası">
           <span class="tile__badge">İmza</span>
         </div>
         <div class="tile__body">
@@ -446,7 +446,7 @@ section { padding: clamp(80px, 13vw, 150px) 0; }
       </article>
 
       <article class="tile reveal">
-        <div class="tile__img" style="background-image: linear-gradient(180deg, rgba(0,0,0,.0), rgba(0,0,0,.35)), url('https://images.unsplash.com/photo-1777333033313-e6d72e7fadc5?auto=format&fit=crop&w=1100&q=80');" role="img" aria-label="Ev usulü makarna">
+        <div class="tile__img" style="background-image: linear-gradient(180deg, rgba(0,0,0,.0), rgba(0,0,0,.35)), url('images/amb-cardak.jpg');" role="img" aria-label="Kamış çardak altı oturma">
           <span class="tile__badge">Klasik</span>
         </div>
         <div class="tile__body">
@@ -592,10 +592,10 @@ section { padding: clamp(80px, 13vw, 150px) 0; }
     </a>
   </div>
   <div class="gallery__strip">
-    <div class="gallery__cell" style="background-image: url('https://images.unsplash.com/photo-1646825864255-8c7b916b45d1?auto=format&fit=crop&w=800&q=80');"><span>Deniz</span></div>
-    <div class="gallery__cell" style="background-image: url('https://images.unsplash.com/photo-1654517319978-b578e907f4de?auto=format&fit=crop&w=800&q=80');"><span>Şezlong</span></div>
-    <div class="gallery__cell" style="background-image: url('https://images.unsplash.com/photo-1677517497394-87d635cf7e10?auto=format&fit=crop&w=800&q=80');"><span>Bar</span></div>
-    <div class="gallery__cell" style="background-image: url('https://images.unsplash.com/photo-1693625656620-e2ffa01fa81a?auto=format&fit=crop&w=800&q=80');"><span>Gün Batımı</span></div>
+    <div class="gallery__cell" style="background-image: url('images/amb-yon.jpg');"><span>Deniz</span></div>
+    <div class="gallery__cell" style="background-image: url('images/amb-nargile.jpg');"><span>Şezlong</span></div>
+    <div class="gallery__cell" style="background-image: url('images/amb-bilardo.jpg');"><span>Bar</span></div>
+    <div class="gallery__cell" style="background-image: url('images/amb-salon.jpg');"><span>Gün Batımı</span></div>
   </div>
 </section>
 
