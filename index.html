@@ -194,17 +194,18 @@ section { padding: clamp(80px, 13vw, 150px) 0; }
 .menu__item-name small { display: block; font-weight: 400; font-size: .85rem; color: var(--ink-soft); margin-top: 4px; font-style: italic; }
 .menu__item-price { font-family: var(--f-script); font-style: italic; font-size: 1.35rem; color: var(--tangerine-2); white-space: nowrap; }
 .menu__note { text-align: center; margin-top: 56px; font-size: .9rem; color: rgba(14,38,64,.55); font-style: italic; }
-.menu__cover-row { display: grid; grid-template-columns: 280px 1fr; gap: 44px; align-items: center; max-width: 1080px; margin: 0 auto 72px; }
-.menu__cover { aspect-ratio: 3/4; background-image: url('images/menu-kapak.jpg'); background-size: cover; background-position: center; border-radius: 6px; box-shadow: 0 24px 60px -26px rgba(14,38,64,.45); }
-.menu__cover-since { font-family: var(--f-script); font-style: italic; font-size: 1.5rem; color: var(--tangerine); margin: 0 0 14px; }
-.menu__cover-note p { color: var(--ink-soft); font-size: 1.08rem; margin: 0 0 16px; max-width: 460px; }
-.menu__cover-tags { font-size: .74rem !important; letter-spacing: .12em; text-transform: uppercase; color: rgba(14,38,64,.5) !important; }
-@media (max-width: 720px){ .menu__cover-row { grid-template-columns: 1fr; gap: 28px; } .menu__cover { max-width: 240px; } }
-.menu__cats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 44px; max-width: 1080px; margin: 0 auto; }
-.menu__cat { padding: 22px 0; border-bottom: 1px dashed var(--line-dark); }
-.menu__cat h4 { font-family: var(--f-display); font-weight: 400; font-size: 1.6rem; margin: 0 0 8px; color: var(--tangerine-2); }
-.menu__cat p { margin: 0; color: var(--ink-soft); font-size: 1rem; line-height: 1.6; }
-@media (max-width: 720px){ .menu__cats { grid-template-columns: 1fr; gap: 0; } }
+.menu__chef { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 560px; margin: 0 auto 64px; }
+.menu__chef svg { width: clamp(150px, 26vw, 210px); height: auto; color: var(--tangerine); }
+.menu__chef-since { font-family: var(--f-script); font-style: italic; font-size: 1.4rem; color: var(--tangerine); margin: 18px 0 6px; }
+.menu__chef-slogan { font-family: var(--f-display); font-size: clamp(1.3rem, 3vw, 1.9rem); color: var(--ink); margin: 0; letter-spacing: .01em; }
+.menu__cats { columns: 2; column-gap: 56px; max-width: 1080px; margin: 0 auto; }
+.menu__cat { break-inside: avoid; -webkit-column-break-inside: avoid; page-break-inside: avoid; margin: 0 0 38px; }
+.menu__cat h4 { font-family: var(--f-display); font-weight: 400; font-size: 1.7rem; margin: 0 0 14px; color: var(--tangerine-2); padding-bottom: 10px; border-bottom: 1px solid var(--line-dark); }
+.menu__cat ul { list-style: none; margin: 0; padding: 0; }
+.menu__cat li { padding: 7px 0; font-size: 1rem; color: var(--ink); border-bottom: 1px dashed var(--line-dark); }
+.menu__cat li:last-child { border-bottom: 0; }
+.menu__cat li small { display: block; font-size: .82rem; color: var(--ink-soft); font-style: italic; margin-top: 2px; }
+@media (max-width: 720px){ .menu__cats { columns: 1; } }
 
 /* ─── Gallery ─────────────────────────────────────── */
 .gallery { background: var(--shell); padding: 0; }
@@ -507,34 +508,338 @@ section { padding: clamp(80px, 13vw, 150px) 0; }
       <p>Kahvaltıdan gece barına; Akdeniz, İtalyan ve Türk mutfağından geniş bir sahil menüsü.</p>
     </header>
 
-    <div class="menu__cover-row">
-      <div class="menu__cover" role="img" aria-label="Satsuma Beach menü kapağı"></div>
-      <div class="menu__cover-note">
-        <p class="menu__cover-since">Since 1992</p>
-        <p>Sabah serpme kahvaltıyla başlayan, öğle pizza ve makarnayla süren, akşam ızgara ve kebapla, gece barla kapanan bir menü. Tüm gün, denize sıfır.</p>
-        <p class="menu__cover-tags">Kahvaltı · Pizza · Makarna · Kebap · Deniz Ürünleri · Biftek · Bar</p>
-      </div>
+    <div class="menu__chef">
+      <svg viewBox="0 0 740 600" role="img" aria-label="Satsuma Beach şef figürü" xmlns="http://www.w3.org/2000/svg"><g transform="translate(0.000000,600.000000) scale(0.100000,-0.100000)"
+fill="currentColor" stroke="none">
+<path d="M4921 5945 c-102 -16 -182 -44 -280 -98 l-75 -41 -65 18 c-153 42
+-239 56 -343 57 -141 0 -253 -29 -372 -99 -77 -45 -189 -160 -239 -243 -111
+-188 -125 -448 -36 -687 10 -29 19 -60 19 -69 0 -17 -84 -153 -128 -207 -13
+-16 -19 -32 -15 -36 4 -4 78 -18 163 -30 144 -20 250 -41 375 -74 86 -23 325
+-129 440 -195 121 -70 243 -152 320 -215 51 -42 109 -86 133 -100 30 -18 -8
+30 -75 95 -90 88 -291 244 -404 314 -221 137 -511 261 -713 306 -32 7 -60 18
+-63 25 -10 26 104 178 233 310 66 67 89 84 140 102 87 31 195 35 334 12 208
+-35 329 -84 693 -280 42 -22 77 -37 77 -32 0 10 -80 79 -149 128 -121 87 -352
+200 -487 239 -237 69 -557 58 -647 -23 -10 -9 -32 -42 -49 -73 -16 -32 -38
+-65 -48 -74 -18 -16 -20 -15 -38 22 -32 63 -44 123 -44 220 1 115 22 195 79
+294 78 138 193 224 353 265 50 13 89 15 170 11 141 -8 238 -42 350 -123 26
+-19 52 -34 57 -34 5 0 22 14 39 31 16 18 59 51 95 75 145 95 337 128 494 85
+288 -79 434 -311 421 -665 -3 -68 -8 -135 -11 -149 -6 -24 0 -29 104 -82 81
+-41 122 -69 151 -103 90 -101 132 -250 110 -385 -40 -244 -281 -465 -507 -467
+-35 0 -63 3 -63 7 0 4 15 22 33 41 30 31 32 37 32 105 0 57 -6 89 -30 147 -40
+103 -110 230 -135 245 -13 8 -15 16 25 -110 23 -71 38 -138 41 -190 5 -78 5
+-81 -29 -135 -153 -241 -252 -431 -245 -467 2 -11 31 25 77 93 40 60 83 117
+95 126 15 13 40 18 89 18 127 0 268 38 387 104 86 48 211 177 254 265 96 190
+102 404 16 586 -50 105 -170 247 -236 277 -18 9 -22 23 -32 126 -21 238 -117
+432 -286 581 -152 134 -348 189 -555 156z"/>
+<path d="M3475 5936 c-38 -17 -99 -80 -93 -97 2 -7 26 9 58 40 29 28 61 51 71
+51 10 0 48 -21 85 -46 88 -60 115 -69 39 -13 -75 55 -112 79 -122 79 -4 -1
+-21 -7 -38 -14z"/>
+<path d="M1300 5703 c-19 -27 -52 -73 -73 -103 -22 -30 -40 -56 -42 -58 -1 -1
+-24 7 -50 18 -64 27 -103 29 -142 5 -24 -14 -33 -27 -33 -45 0 -29 111 -263
+130 -275 19 -11 5 66 -22 125 -41 90 -40 140 2 140 22 0 52 -39 78 -101 39
+-90 113 -321 108 -335 -12 -30 -49 -12 -129 64 -102 95 -173 133 -250 133 -43
+0 -63 -5 -87 -23 -49 -36 -77 -103 -47 -113 104 -36 131 -51 189 -105 64 -58
+113 -134 138 -215 44 -141 113 -217 224 -249 43 -12 71 -43 162 -176 24 -36
+44 -60 44 -55 0 6 -15 58 -34 117 -19 59 -37 120 -41 137 -5 26 -13 32 -48 41
+-23 5 -70 24 -104 41 -74 37 -102 76 -158 223 -64 167 -97 209 -210 260 -56
+26 -59 28 -41 42 28 20 100 17 145 -6 22 -11 78 -56 125 -101 l87 -82 37 12
+c69 21 69 20 29 117 -69 172 -88 313 -52 385 21 41 74 99 91 99 20 0 28 -86
+15 -146 -11 -50 -10 -109 5 -204 l6 -35 19 51 c29 76 61 104 119 104 49 0 105
+-31 97 -54 -2 -6 -30 -20 -63 -31 -49 -17 -62 -26 -76 -55 -25 -52 -22 -95 14
+-173 l32 -69 -42 -37 c-53 -45 -68 -87 -52 -137 l13 -37 16 49 c18 53 65 94
+109 94 41 0 158 39 175 58 23 25 54 100 62 150 4 23 10 42 15 42 14 0 60 -60
+66 -86 10 -39 -2 -63 -76 -163 -105 -142 -139 -271 -106 -401 67 -260 388
+-694 927 -1255 162 -169 192 -203 186 -217 -2 -7 -58 -30 -124 -51 -178 -58
+-434 -187 -489 -248 -9 -10 -22 -19 -29 -19 -16 0 -90 -78 -82 -86 4 -4 32 -9
+62 -12 31 -2 58 -8 60 -12 3 -5 -11 -25 -31 -47 -121 -129 -205 -243 -293
+-400 -29 -51 -69 -107 -89 -124 -51 -43 -202 -98 -202 -74 0 29 76 223 129
+328 130 259 405 657 560 812 59 59 70 75 52 75 -21 0 -227 -204 -341 -338 -24
+-28 -52 -52 -61 -52 -18 0 -98 88 -142 155 -15 22 -39 58 -55 80 -31 44 -129
+208 -209 350 -93 164 -222 452 -243 544 l-13 55 31 26 c17 14 66 46 109 72 95
+57 167 108 160 114 -3 3 -36 -10 -73 -29 -38 -19 -128 -60 -200 -92 l-131 -57
+9 -42 c33 -146 291 -677 492 -1009 39 -65 95 -157 124 -205 28 -47 52 -92 52
+-98 0 -6 -29 -54 -64 -107 -35 -52 -116 -186 -179 -298 -111 -199 -129 -232
+-158 -294 -21 -44 -70 -72 -150 -85 -71 -12 -71 -12 -91 -57 -11 -24 -17 -51
+-14 -58 2 -7 -1 -15 -7 -18 -37 -14 -130 -425 -152 -672 -17 -185 -20 -671 -5
+-680 6 -4 10 21 10 67 1 203 60 617 117 818 29 104 91 285 115 340 34 74 58
+94 174 140 159 65 502 238 514 260 6 11 29 64 50 117 63 153 198 370 280 448
+31 30 33 30 198 41 92 6 170 9 174 5 4 -4 -44 -85 -107 -181 -126 -191 -225
+-375 -225 -420 0 -26 13 -37 123 -106 175 -112 528 -284 582 -284 9 0 24 19
+36 48 77 180 181 400 222 470 84 141 45 110 -99 -78 -98 -128 -171 -234 -179
+-260 -5 -17 -13 -19 -53 -14 -194 25 -472 194 -472 287 0 44 157 401 212 484
+45 66 74 81 215 108 70 14 157 34 193 45 86 26 93 26 153 -13 29 -19 63 -40
+77 -49 17 -10 40 -49 69 -114 167 -377 258 -521 439 -698 176 -172 434 -337
+567 -362 l37 -7 -7 44 c-4 24 -11 60 -16 79 -4 19 -15 65 -24 102 -91 391
+-415 936 -686 1154 -79 64 -83 64 -162 0 -118 -95 -131 -100 -196 -66 -83 42
+-141 143 -141 246 0 53 0 53 38 64 74 20 71 30 -9 30 l-76 0 -12 -54 c-6 -29
+-14 -66 -17 -82 -16 -89 -36 -180 -42 -186 -9 -9 -144 -29 -360 -52 -151 -17
+-312 -20 -312 -7 0 5 24 25 53 44 122 81 255 134 495 197 45 12 82 26 82 31 0
+5 -19 26 -42 47 -454 403 -905 889 -1069 1152 -91 147 -129 235 -149 347 -18
+103 9 200 84 298 20 26 46 65 57 86 35 70 19 164 -42 250 -23 33 -90 79 -114
+79 -25 0 -44 -42 -56 -122 -13 -87 -39 -138 -69 -138 -55 0 -120 65 -120 121
+0 33 46 77 95 90 45 13 105 68 105 97 0 11 -17 35 -39 55 -60 54 -134 72 -229
+53 l-42 -8 10 27 c18 46 12 142 -11 188 -22 44 -47 77 -59 77 -3 0 -22 -21
+-40 -47z m2386 -2936 c153 -165 250 -298 355 -492 61 -112 67 -125 116 -245
+36 -90 73 -224 73 -267 0 -30 -5 -29 -109 30 -71 40 -322 248 -408 338 -101
+106 -187 243 -257 409 -42 99 -44 119 -13 148 29 28 23 34 141 -146 81 -123
+262 -332 288 -332 42 0 -127 320 -262 496 -28 36 -49 69 -46 72 9 9 60 40 67
+41 3 1 28 -23 55 -52z"/>
+<path d="M4472 4623 c4 -22 38 -30 38 -10 0 8 -7 18 -16 21 -23 9 -26 8 -22
+-11z"/>
+<path d="M3255 4412 c-81 -29 -108 -45 -132 -81 -49 -73 -40 -171 29 -286 l42
+-70 1 -180 c2 -178 2 -181 37 -285 24 -69 32 -106 25 -109 -16 -6 -100 90
+-154 177 -26 39 -50 72 -55 72 -17 0 -86 -158 -121 -277 -18 -58 -11 -69 16
+-24 25 42 107 131 120 130 7 0 32 -25 57 -55 47 -56 203 -197 268 -242 330
+-226 509 -309 867 -402 66 -17 124 -35 129 -40 4 -4 0 -16 -10 -25 -37 -34
+-169 -128 -221 -157 -45 -25 -52 -33 -41 -45 31 -38 238 -113 422 -152 55 -12
+102 -23 105 -25 9 -6 310 -53 446 -70 318 -41 774 -64 782 -40 6 19 -89 135
+-138 170 -56 39 -126 64 -179 64 -47 0 -62 -17 -23 -26 51 -12 99 -42 112 -70
+16 -35 7 -41 -77 -50 -172 -18 -628 39 -928 116 -141 37 -298 91 -317 110 -10
+9 -6 12 168 127 135 89 233 163 273 206 l23 25 -248 -2 c-175 -1 -254 2 -268
+11 -23 14 -21 15 70 33 102 20 206 61 277 108 30 19 61 27 155 38 134 15 157
+21 230 58 38 19 59 38 79 72 106 180 -141 528 -601 846 -184 127 -400 228
+-645 303 -208 63 -468 84 -575 47z m470 -77 c81 -23 87 -31 34 -53 l-44 -19
+130 -5 c128 -5 223 -27 232 -53 1 -6 -23 -23 -54 -40 -78 -40 -103 -84 -103
+-180 0 -38 4 -87 9 -107 l9 -37 -62 -30 c-78 -38 -143 -47 -190 -27 -43 18
+-76 68 -76 118 0 49 27 68 98 68 48 0 53 2 41 16 -39 47 -121 57 -183 21 -106
+-61 -101 -218 12 -317 24 -22 63 -45 86 -51 45 -12 192 -6 223 9 16 9 97 38
+133 49 12 3 22 -18 44 -89 40 -128 77 -198 130 -245 80 -71 195 -83 277 -29
+71 47 102 158 63 225 -23 38 -58 53 -120 49 l-49 -3 43 -23 c37 -20 42 -26 42
+-57 0 -49 -29 -75 -82 -75 -60 0 -102 32 -139 106 -30 60 -57 191 -42 204 5 4
+29 13 55 20 26 7 57 23 69 36 26 28 28 28 -35 9 -121 -37 -189 -9 -248 102
+-37 69 -12 164 52 195 81 41 157 17 335 -108 106 -73 147 -115 205 -206 47
+-74 63 -85 53 -37 -5 28 -4 30 13 21 59 -32 211 -216 261 -315 63 -127 57
+-223 -19 -281 -39 -29 -127 -59 -160 -54 -22 3 -20 6 26 56 27 29 47 54 45 57
+-3 2 -27 -13 -54 -35 -155 -120 -224 -158 -370 -197 -285 -76 -635 -13 -854
+152 -183 139 -279 300 -323 545 -12 68 -3 258 17 363 21 108 18 123 -9 53 -12
+-33 -27 -61 -33 -63 -6 -2 -20 20 -33 49 -16 38 -21 64 -18 100 8 74 54 113
+153 129 83 13 342 3 410 -16z"/>
+<path d="M5820 3549 c-96 -43 -123 -89 -130 -219 l-5 -94 -71 -27 c-152 -56
+-284 -139 -504 -318 -162 -133 -173 -139 -293 -185 -139 -53 -232 -98 -232
+-111 0 -14 159 -51 275 -65 159 -19 566 -23 742 -8 177 15 182 14 294 -49 130
+-73 214 -97 330 -95 84 2 153 29 334 127 85 46 184 95 220 108 120 45 248 63
+175 25 -189 -98 -327 -202 -477 -359 -70 -74 -142 -150 -160 -168 l-33 -35
+-195 -1 c-178 -2 -266 -10 -548 -49 l-34 -5 7 39 c4 22 4 40 1 40 -11 0 -100
+-175 -118 -234 -53 -169 -71 -423 -44 -591 8 -44 12 -83 9 -88 -7 -11 -127 -8
+-263 8 -202 24 -488 92 -756 181 -181 60 -243 85 -453 183 -111 51 -178 78
+-184 72 -14 -14 9 -208 33 -276 23 -68 66 -149 91 -171 24 -22 24 -14 -6 103
+-34 134 -34 138 8 113 43 -27 50 -25 42 10 -4 16 -3 30 2 30 19 0 153 -53 153
+-61 0 -5 -9 -64 -19 -131 -19 -122 -23 -154 -37 -295 -4 -40 -10 -73 -13 -73
+-10 0 -85 80 -112 120 -13 19 -29 41 -36 48 -12 13 -107 149 -155 225 -133
+206 -151 293 -107 513 11 56 19 124 17 149 l-3 47 -42 -99 c-53 -122 -68 -170
+-83 -258 -14 -80 -1 -150 49 -259 65 -144 248 -421 426 -647 17 -21 44 -55 60
+-76 17 -21 49 -62 73 -91 l42 -53 0 48 c0 26 -4 86 -9 133 -5 47 -12 129 -16
+184 -8 117 0 121 58 25 132 -217 376 -497 668 -768 l130 -121 142 0 c163 1
+163 -9 -3 100 -277 181 -611 501 -852 817 -144 189 -154 212 -137 328 14 93
+18 105 36 105 15 0 296 -92 443 -144 70 -26 269 -84 419 -123 245 -64 468 -95
+555 -79 44 8 110 64 136 115 49 98 87 288 95 479 6 131 -6 162 -25 65 -27
+-140 -45 -197 -96 -303 -63 -131 -66 -131 -112 -12 -48 122 -57 174 -57 337 0
+199 5 221 53 235 176 50 227 55 541 55 l303 0 25 35 c13 19 40 62 59 94 50 84
+182 234 226 257 48 25 195 26 355 3 63 -9 116 -14 119 -11 11 11 -18 89 -44
+117 -32 35 -102 68 -102 48 0 -7 7 -22 15 -32 8 -11 15 -23 15 -28 0 -4 -52
+-8 -115 -8 -66 0 -115 4 -115 9 0 28 169 117 325 172 50 17 91 33 93 34 2 2
+-4 15 -13 28 -22 34 -64 47 -154 47 -136 0 -275 -42 -646 -194 -150 -62 -165
+-66 -237 -66 -49 0 -93 6 -120 17 -45 17 -87 44 -88 54 0 11 104 33 380 82
+124 22 403 87 605 142 82 22 219 67 345 113 l105 39 3 116 3 117 -73 0 c-64 0
+-92 7 -223 55 -134 50 -228 77 -390 114 -147 33 -478 41 -615 15 -45 -8 -117
+-24 -159 -34 -119 -30 -121 -30 -121 33 0 65 24 114 70 145 29 20 44 23 82 18
+26 -2 65 -14 88 -26 23 -12 45 -19 48 -16 10 10 -61 77 -97 92 -49 20 -138 17
+-191 -7z m768 -264 c51 -8 126 -25 165 -36 40 -11 81 -23 92 -26 11 -2 29 -8
+40 -13 11 -4 43 -16 70 -25 135 -48 295 -145 295 -179 0 -52 -517 -190 -1035
+-276 -66 -11 -140 -24 -165 -29 -62 -14 -178 -29 -355 -46 -161 -16 -650 -21
+-659 -7 -14 22 94 147 212 246 158 131 377 260 542 318 75 27 238 67 335 83
+100 16 335 11 463 -10z"/>
+<path d="M7055 81 c-38 -9 -72 -28 -108 -57 l-29 -24 228 0 c223 0 227 0 210
+19 -10 11 -42 31 -72 45 -44 21 -69 26 -127 25 -39 -1 -85 -4 -102 -8z"/>
+</g></svg>
+      <p class="menu__chef-since">Since 1992</p>
+      <p class="menu__chef-slogan">Good Food · Good Company · Good Price</p>
     </div>
-
     <div class="menu__cats">
-      <div class="menu__cat"><h4>Kahvaltı</h4><p>Serpme kahvaltı (2 kişilik), Turkish &amp; English Breakfast, menemen, sahanda yumurta</p></div>
-      <div class="menu__cat"><h4>Tostlar</h4><p>Kaşarlı, bacon, karışık, Ayvalık tost</p></div>
-      <div class="menu__cat"><h4>Omletler</h4><p>Sade, peynirli, bacon, karışık, sebzeli omlet</p></div>
-      <div class="menu__cat"><h4>Gözleme &amp; Hamur İşi</h4><p>Otlu peynirli, patatesli, kaşarlı, kıymalı gözleme · mantı · çiğ börek</p></div>
-      <div class="menu__cat"><h4>Başlangıçlar</h4><p>Günün çorbası, sarımsaklı mantar, karides &amp; kalamar tava, sigara böreği, sarımsaklı ekmek, çıtır patates, bira tabağı</p></div>
-      <div class="menu__cat"><h4>Burgerler</h4><p>Hamburger, cheeseburger, chicken burger</p></div>
-      <div class="menu__cat"><h4>Salatalar</h4><p>Ton balıklı, Yunan, mevsim, Sezar salata</p></div>
-      <div class="menu__cat"><h4>Kebaplar</h4><p>Kuzu şiş, ızgara köfte, karışık ızgara, kuzu pirzola, tavuk şiş, çökertme kebap</p></div>
-      <div class="menu__cat"><h4>Biftekler</h4><p>Pepper steak, Diana steak, T-Bone, mushroom steak</p></div>
-      <div class="menu__cat"><h4>Deniz Ürünleri</h4><p>Balık çorbası, levrek, çupra, jumbo karides, balık &amp; cips</p></div>
-      <div class="menu__cat"><h4>Güveçler &amp; Sıcak</h4><p>Kuzu güveç, tavuk sote, karides güveç, çoban kavurma</p></div>
-      <div class="menu__cat"><h4>Tavuk Yemekleri</h4><p>Meksika usulü tavuk, mantar soslu tavuk, tavuk şinitzel, tavuk köri</p></div>
-      <div class="menu__cat"><h4>Fajita &amp; Dürüm</h4><p>Et &amp; tavuk fajita · tavuklu, etli, sebzeli dürüm</p></div>
-      <div class="menu__cat"><h4>Makarnalar</h4><p>Napoletana, bolognese, arrabbiata, fettucini</p></div>
-      <div class="menu__cat"><h4>Pizzalar</h4><p>Margarita, vegetarian, hawai, mariana, chicken, karışık, bacon, mantarlı, ton balıklı</p></div>
-      <div class="menu__cat"><h4>Türk Pideleri</h4><p>Kıymalı, kıymalı kaşarlı, karışık, kuşbaşılı, kaşarlı, sebzeli pide · lahmacun</p></div>
-      <div class="menu__cat"><h4>Vejetaryen</h4><p>Sebzeli makarna, vejetaryen güveç, sebzeli curry, ızgara sebze</p></div>
-      <div class="menu__cat"><h4>Bar &amp; İçecek</h4><p>Şarap, bira, yerli içkiler, alkolsüz kokteyl, taze meyve suyu, çay &amp; kahve, soğuk içecekler</p></div>
+      <div class="menu__cat">
+        <h4>Kahvaltı</h4>
+        <ul>
+          <li>Serpme Kahvaltı<small>2 kişilik · 09:00 — 12:00</small></li>
+          <li>Turkish Breakfast</li>
+          <li>English Breakfast</li>
+          <li>Menemen</li>
+          <li>Sahanda Yumurta</li>
+        </ul>
+      </div>
+      <div class="menu__cat">
+        <h4>Tostlar</h4>
+        <ul>
+          <li>Kaşarlı Tost</li>
+          <li>Bacon Tost</li>
+          <li>Karışık Tost</li>
+          <li>Ayvalık Tost</li>
+        </ul>
+      </div>
+      <div class="menu__cat">
+        <h4>Omletler</h4>
+        <ul>
+          <li>Sade Omlet</li>
+          <li>Peynirli Omlet</li>
+          <li>Bacon Omlet</li>
+          <li>Karışık Omlet</li>
+          <li>Sebzeli Omlet</li>
+        </ul>
+      </div>
+      <div class="menu__cat">
+        <h4>Gözleme &amp; Hamur İşi</h4>
+        <ul>
+          <li>Otlu Peynirli Gözleme</li>
+          <li>Patatesli Gözleme</li>
+          <li>Kaşarlı Gözleme</li>
+          <li>Kıymalı Gözleme</li>
+          <li>Mantı</li>
+          <li>Çiğ Börek</li>
+        </ul>
+      </div>
+      <div class="menu__cat">
+        <h4>Başlangıçlar</h4>
+        <ul>
+          <li>Günün Çorbası</li>
+          <li>Sarımsaklı Mantar</li>
+          <li>Karides Tava</li>
+          <li>Kalamar Tava</li>
+          <li>Sigara Böreği</li>
+          <li>Sarımsaklı Ekmek</li>
+          <li>Çıtır Patates</li>
+          <li>Bira Tabağı</li>
+        </ul>
+      </div>
+      <div class="menu__cat">
+        <h4>Burgerler</h4>
+        <ul>
+          <li>Hamburger</li>
+          <li>Cheeseburger</li>
+          <li>Chicken Burger</li>
+        </ul>
+      </div>
+      <div class="menu__cat">
+        <h4>Salatalar</h4>
+        <ul>
+          <li>Ton Balıklı Salata</li>
+          <li>Yunan Salatası</li>
+          <li>Mevsim Salatası</li>
+          <li>Sezar Salata</li>
+        </ul>
+      </div>
+      <div class="menu__cat">
+        <h4>Kebaplar</h4>
+        <ul>
+          <li>Kuzu Şiş</li>
+          <li>Izgara Köfte</li>
+          <li>Karışık Izgara</li>
+          <li>Kuzu Pirzola</li>
+          <li>Tavuk Şiş</li>
+          <li>Çökertme Kebap</li>
+        </ul>
+      </div>
+      <div class="menu__cat">
+        <h4>Biftekler</h4>
+        <ul>
+          <li>Pepper Steak<small>Karabiber kremalı sos</small></li>
+          <li>Diana Steak<small>Krema · mantar sos</small></li>
+          <li>T-Bone Steak</li>
+          <li>Mushroom Steak<small>Mantar soslu</small></li>
+        </ul>
+      </div>
+      <div class="menu__cat">
+        <h4>Deniz Ürünleri</h4>
+        <ul>
+          <li>Balık Çorbası</li>
+          <li>Levrek</li>
+          <li>Çupra</li>
+          <li>Jumbo Karides</li>
+          <li>Balık &amp; Cips</li>
+        </ul>
+      </div>
+      <div class="menu__cat">
+        <h4>Güveçler &amp; Sıcak</h4>
+        <ul>
+          <li>Kuzu Güveç</li>
+          <li>Tavuk Sote</li>
+          <li>Karides Güveç</li>
+          <li>Çoban Kavurma</li>
+        </ul>
+      </div>
+      <div class="menu__cat">
+        <h4>Tavuk Yemekleri</h4>
+        <ul>
+          <li>Meksika Usulü Tavuk<small>Acı sos</small></li>
+          <li>Mantar Soslu Tavuk</li>
+          <li>Tavuk Şinitzel</li>
+          <li>Tavuk Köri</li>
+        </ul>
+      </div>
+      <div class="menu__cat">
+        <h4>Fajita &amp; Dürüm</h4>
+        <ul>
+          <li>Et Fajita</li>
+          <li>Tavuk Fajita</li>
+          <li>Tavuklu Dürüm</li>
+          <li>Etli Dürüm</li>
+          <li>Sebzeli Dürüm</li>
+        </ul>
+      </div>
+      <div class="menu__cat">
+        <h4>Makarnalar</h4>
+        <ul>
+          <li>Napoletana</li>
+          <li>Bolognese</li>
+          <li>Arrabbiata</li>
+          <li>Fettucini</li>
+        </ul>
+      </div>
+      <div class="menu__cat">
+        <h4>Pizzalar</h4>
+        <ul>
+          <li>Margarita</li>
+          <li>Vegetarian</li>
+          <li>Hawai</li>
+          <li>Mariana</li>
+          <li>Chicken</li>
+          <li>Karışık</li>
+          <li>Bacon</li>
+          <li>Mantarlı</li>
+          <li>Ton Balıklı</li>
+        </ul>
+      </div>
+      <div class="menu__cat">
+        <h4>Türk Pideleri</h4>
+        <ul>
+          <li>Kıymalı Pide</li>
+          <li>Kıymalı Kaşarlı Pide</li>
+          <li>Karışık Pide</li>
+          <li>Kuşbaşılı Pide</li>
+          <li>Kaşarlı Pide</li>
+          <li>Sebzeli Pide</li>
+          <li>Lahmacun</li>
+        </ul>
+      </div>
+      <div class="menu__cat">
+        <h4>Vejetaryen</h4>
+        <ul>
+          <li>Sebzeli Makarna</li>
+          <li>Vejetaryen Güveç</li>
+          <li>Sebzeli Curry</li>
+          <li>Izgara Sebze</li>
+        </ul>
+      </div>
+      <div class="menu__cat">
+        <h4>Bar &amp; İçecek</h4>
+        <ul>
+          <li>Şarap<small>Beyaz · kırmızı · rosé</small></li>
+          <li>Bira<small>Tuborg · Efes · Corona · Bomonti</small></li>
+          <li>Yerli İçkiler<small>Rakı · vodka · cin</small></li>
+          <li>Alkolsüz Kokteyl<small>Milkshake · frozen</small></li>
+          <li>Taze Sıkım Portakal Suyu</li>
+          <li>Çay · Türk Kahvesi · Espresso</li>
+          <li>Soğuk İçecekler<small>Cola · Fanta · Sprite · Ice Tea</small></li>
+        </ul>
+      </div>
     </div>
     <p class="menu__note">Menümüz sezona göre güncellenir · Vejetaryen ve glutensiz seçenekler için ekibimize sorabilirsiniz · Güncel fiyatlar için mekânımızdaki menüye bakınız.</p>
   </div>
