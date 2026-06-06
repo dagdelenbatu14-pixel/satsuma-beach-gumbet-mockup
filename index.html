@@ -200,6 +200,11 @@ section { padding: clamp(80px, 13vw, 150px) 0; }
 .menu__cover-note p { color: var(--ink-soft); font-size: 1.08rem; margin: 0 0 16px; max-width: 460px; }
 .menu__cover-tags { font-size: .74rem !important; letter-spacing: .12em; text-transform: uppercase; color: rgba(14,38,64,.5) !important; }
 @media (max-width: 720px){ .menu__cover-row { grid-template-columns: 1fr; gap: 28px; } .menu__cover { max-width: 240px; } }
+.menu__cats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 44px; max-width: 1080px; margin: 0 auto; }
+.menu__cat { padding: 22px 0; border-bottom: 1px dashed var(--line-dark); }
+.menu__cat h4 { font-family: var(--f-display); font-weight: 400; font-size: 1.6rem; margin: 0 0 8px; color: var(--tangerine-2); }
+.menu__cat p { margin: 0; color: var(--ink-soft); font-size: 1rem; line-height: 1.6; }
+@media (max-width: 720px){ .menu__cats { grid-template-columns: 1fr; gap: 0; } }
 
 /* ─── Gallery ─────────────────────────────────────── */
 .gallery { background: var(--shell); padding: 0; }
@@ -511,142 +516,26 @@ section { padding: clamp(80px, 13vw, 150px) 0; }
       </div>
     </div>
 
-    <div class="menu__grid">
-      <div class="menu__col">
-        <h3>Kahvaltı</h3>
-        <div class="menu__item"><div class="menu__item-name">Serpme Kahvaltı <small>2 kişilik · 09:00 — 12:00</small></div></div>
-        <div class="menu__item"><div class="menu__item-name">Turkish Breakfast</div></div>
-        <div class="menu__item"><div class="menu__item-name">English Breakfast</div></div>
-        <div class="menu__item"><div class="menu__item-name">Menemen</div></div>
-        <div class="menu__item"><div class="menu__item-name">Sahanda Yumurta</div></div>
-
-        <h3 style="margin-top:48px;">Tostlar</h3>
-        <div class="menu__item"><div class="menu__item-name">Kaşarlı Tost</div></div>
-        <div class="menu__item"><div class="menu__item-name">Bacon Tost</div></div>
-        <div class="menu__item"><div class="menu__item-name">Karışık Tost</div></div>
-        <div class="menu__item"><div class="menu__item-name">Ayvalık Tost</div></div>
-
-        <h3 style="margin-top:48px;">Gözleme &amp; Hamur İşi</h3>
-        <div class="menu__item"><div class="menu__item-name">Otlu Peynirli Gözleme</div></div>
-        <div class="menu__item"><div class="menu__item-name">Patatesli Gözleme</div></div>
-        <div class="menu__item"><div class="menu__item-name">Kaşarlı Gözleme</div></div>
-        <div class="menu__item"><div class="menu__item-name">Kıymalı Gözleme</div></div>
-        <div class="menu__item"><div class="menu__item-name">Mantı</div></div>
-        <div class="menu__item"><div class="menu__item-name">Çiğ Börek</div></div>
-
-        <h3 style="margin-top:48px;">Omletler</h3>
-        <div class="menu__item"><div class="menu__item-name">Sade Omlet</div></div>
-        <div class="menu__item"><div class="menu__item-name">Peynirli Omlet</div></div>
-        <div class="menu__item"><div class="menu__item-name">Bacon Omlet</div></div>
-        <div class="menu__item"><div class="menu__item-name">Karışık Omlet</div></div>
-        <div class="menu__item"><div class="menu__item-name">Sebzeli Omlet</div></div>
-
-        <h3 style="margin-top:48px;">Başlangıçlar</h3>
-        <div class="menu__item"><div class="menu__item-name">Günün Çorbası</div></div>
-        <div class="menu__item"><div class="menu__item-name">Sarımsaklı Mantar</div></div>
-        <div class="menu__item"><div class="menu__item-name">Karides Tava</div></div>
-        <div class="menu__item"><div class="menu__item-name">Kalamar Tava</div></div>
-        <div class="menu__item"><div class="menu__item-name">Sigara Böreği</div></div>
-        <div class="menu__item"><div class="menu__item-name">Sarımsaklı Ekmek</div></div>
-        <div class="menu__item"><div class="menu__item-name">Çıtır Patates</div></div>
-        <div class="menu__item"><div class="menu__item-name">Bira Tabağı</div></div>
-
-        <h3 style="margin-top:48px;">Burgerler</h3>
-        <div class="menu__item"><div class="menu__item-name">Hamburger</div></div>
-        <div class="menu__item"><div class="menu__item-name">Cheeseburger</div></div>
-        <div class="menu__item"><div class="menu__item-name">Chicken Burger</div></div>
-
-        <h3 style="margin-top:48px;">Salatalar</h3>
-        <div class="menu__item"><div class="menu__item-name">Ton Balıklı Salata</div></div>
-        <div class="menu__item"><div class="menu__item-name">Yunan Salatası</div></div>
-        <div class="menu__item"><div class="menu__item-name">Mevsim Salatası</div></div>
-        <div class="menu__item"><div class="menu__item-name">Sezar Salata</div></div>
-      </div>
-
-      <div class="menu__col">
-        <h3>Kebaplar</h3>
-        <div class="menu__item"><div class="menu__item-name">Kuzu Şiş</div></div>
-        <div class="menu__item"><div class="menu__item-name">Izgara Köfte</div></div>
-        <div class="menu__item"><div class="menu__item-name">Karışık Izgara</div></div>
-        <div class="menu__item"><div class="menu__item-name">Kuzu Pirzola</div></div>
-        <div class="menu__item"><div class="menu__item-name">Tavuk Şiş</div></div>
-        <div class="menu__item"><div class="menu__item-name">Çökertme Kebap</div></div>
-
-        <h3 style="margin-top:48px;">Biftekler</h3>
-        <div class="menu__item"><div class="menu__item-name">Pepper Steak <small>Karabiber kremalı sos</small></div></div>
-        <div class="menu__item"><div class="menu__item-name">Diana Steak <small>Krema · mantar sos</small></div></div>
-        <div class="menu__item"><div class="menu__item-name">T-Bone Steak</div></div>
-        <div class="menu__item"><div class="menu__item-name">Mushroom Steak <small>Mantar soslu</small></div></div>
-
-        <h3 style="margin-top:48px;">Deniz Ürünleri</h3>
-        <div class="menu__item"><div class="menu__item-name">Balık Çorbası</div></div>
-        <div class="menu__item"><div class="menu__item-name">Levrek</div></div>
-        <div class="menu__item"><div class="menu__item-name">Çupra</div></div>
-        <div class="menu__item"><div class="menu__item-name">Jumbo Karides</div></div>
-        <div class="menu__item"><div class="menu__item-name">Balık &amp; Cips</div></div>
-
-        <h3 style="margin-top:48px;">Güveçler &amp; Sıcak</h3>
-        <div class="menu__item"><div class="menu__item-name">Kuzu Güveç</div></div>
-        <div class="menu__item"><div class="menu__item-name">Tavuk Sote</div></div>
-        <div class="menu__item"><div class="menu__item-name">Karides Güveç</div></div>
-        <div class="menu__item"><div class="menu__item-name">Çoban Kavurma</div></div>
-
-        <h3 style="margin-top:48px;">Tavuk Yemekleri</h3>
-        <div class="menu__item"><div class="menu__item-name">Meksika Usulü Tavuk <small>Acı sos</small></div></div>
-        <div class="menu__item"><div class="menu__item-name">Mantar Soslu Tavuk</div></div>
-        <div class="menu__item"><div class="menu__item-name">Tavuk Şinitzel</div></div>
-        <div class="menu__item"><div class="menu__item-name">Tavuk Köri</div></div>
-
-        <h3 style="margin-top:48px;">Fajita &amp; Dürüm</h3>
-        <div class="menu__item"><div class="menu__item-name">Et Fajita</div></div>
-        <div class="menu__item"><div class="menu__item-name">Tavuk Fajita</div></div>
-        <div class="menu__item"><div class="menu__item-name">Tavuklu Dürüm</div></div>
-        <div class="menu__item"><div class="menu__item-name">Etli Dürüm</div></div>
-        <div class="menu__item"><div class="menu__item-name">Sebzeli Dürüm</div></div>
-
-        <h3 style="margin-top:48px;">Makarnalar</h3>
-        <div class="menu__item"><div class="menu__item-name">Napoletana</div></div>
-        <div class="menu__item"><div class="menu__item-name">Bolognese</div></div>
-        <div class="menu__item"><div class="menu__item-name">Arrabbiata</div></div>
-        <div class="menu__item"><div class="menu__item-name">Fettucini</div></div>
-
-        <h3 style="margin-top:48px;">Pizzalar</h3>
-        <div class="menu__item"><div class="menu__item-name">Margarita</div></div>
-        <div class="menu__item"><div class="menu__item-name">Vegetarian</div></div>
-        <div class="menu__item"><div class="menu__item-name">Hawai</div></div>
-        <div class="menu__item"><div class="menu__item-name">Mariana</div></div>
-        <div class="menu__item"><div class="menu__item-name">Chicken Pizza</div></div>
-        <div class="menu__item"><div class="menu__item-name">Karışık Pizza</div></div>
-        <div class="menu__item"><div class="menu__item-name">Bacon Pizza</div></div>
-        <div class="menu__item"><div class="menu__item-name">Mantarlı Pizza</div></div>
-        <div class="menu__item"><div class="menu__item-name">Ton Balıklı Pizza</div></div>
-
-        <h3 style="margin-top:48px;">Türk Pideleri</h3>
-        <div class="menu__item"><div class="menu__item-name">Kıymalı Pide</div></div>
-        <div class="menu__item"><div class="menu__item-name">Kıymalı Kaşarlı Pide</div></div>
-        <div class="menu__item"><div class="menu__item-name">Karışık Pide</div></div>
-        <div class="menu__item"><div class="menu__item-name">Kuşbaşılı Pide</div></div>
-        <div class="menu__item"><div class="menu__item-name">Kaşarlı Pide</div></div>
-        <div class="menu__item"><div class="menu__item-name">Sebzeli Pide</div></div>
-        <div class="menu__item"><div class="menu__item-name">Lahmacun</div></div>
-
-        <h3 style="margin-top:48px;">Vejetaryen</h3>
-        <div class="menu__item"><div class="menu__item-name">Sebzeli Makarna</div></div>
-        <div class="menu__item"><div class="menu__item-name">Vejetaryen Güveç</div></div>
-        <div class="menu__item"><div class="menu__item-name">Sebzeli Curry</div></div>
-        <div class="menu__item"><div class="menu__item-name">Izgara Sebze</div></div>
-
-        <h3 style="margin-top:48px;">Bar &amp; İçecek</h3>
-        <div class="menu__item"><div class="menu__item-name">Şarap <small>Beyaz · kırmızı · rosé</small></div></div>
-        <div class="menu__item"><div class="menu__item-name">Bira <small>Tuborg · Efes · Corona · Bomonti</small></div></div>
-        <div class="menu__item"><div class="menu__item-name">Yerli İçkiler <small>Rakı · vodka · cin</small></div></div>
-        <div class="menu__item"><div class="menu__item-name">Alkolsüz Kokteyl <small>Milkshake · frozen</small></div></div>
-        <div class="menu__item"><div class="menu__item-name">Taze Sıkım Portakal Suyu</div></div>
-        <div class="menu__item"><div class="menu__item-name">Çay · Türk Kahvesi · Espresso</div></div>
-        <div class="menu__item"><div class="menu__item-name">Soğuk İçecekler <small>Cola · Fanta · Sprite · Ice Tea</small></div></div>
-      </div>
+    <div class="menu__cats">
+      <div class="menu__cat"><h4>Kahvaltı</h4><p>Serpme kahvaltı (2 kişilik), Turkish &amp; English Breakfast, menemen, sahanda yumurta</p></div>
+      <div class="menu__cat"><h4>Tostlar</h4><p>Kaşarlı, bacon, karışık, Ayvalık tost</p></div>
+      <div class="menu__cat"><h4>Omletler</h4><p>Sade, peynirli, bacon, karışık, sebzeli omlet</p></div>
+      <div class="menu__cat"><h4>Gözleme &amp; Hamur İşi</h4><p>Otlu peynirli, patatesli, kaşarlı, kıymalı gözleme · mantı · çiğ börek</p></div>
+      <div class="menu__cat"><h4>Başlangıçlar</h4><p>Günün çorbası, sarımsaklı mantar, karides &amp; kalamar tava, sigara böreği, sarımsaklı ekmek, çıtır patates, bira tabağı</p></div>
+      <div class="menu__cat"><h4>Burgerler</h4><p>Hamburger, cheeseburger, chicken burger</p></div>
+      <div class="menu__cat"><h4>Salatalar</h4><p>Ton balıklı, Yunan, mevsim, Sezar salata</p></div>
+      <div class="menu__cat"><h4>Kebaplar</h4><p>Kuzu şiş, ızgara köfte, karışık ızgara, kuzu pirzola, tavuk şiş, çökertme kebap</p></div>
+      <div class="menu__cat"><h4>Biftekler</h4><p>Pepper steak, Diana steak, T-Bone, mushroom steak</p></div>
+      <div class="menu__cat"><h4>Deniz Ürünleri</h4><p>Balık çorbası, levrek, çupra, jumbo karides, balık &amp; cips</p></div>
+      <div class="menu__cat"><h4>Güveçler &amp; Sıcak</h4><p>Kuzu güveç, tavuk sote, karides güveç, çoban kavurma</p></div>
+      <div class="menu__cat"><h4>Tavuk Yemekleri</h4><p>Meksika usulü tavuk, mantar soslu tavuk, tavuk şinitzel, tavuk köri</p></div>
+      <div class="menu__cat"><h4>Fajita &amp; Dürüm</h4><p>Et &amp; tavuk fajita · tavuklu, etli, sebzeli dürüm</p></div>
+      <div class="menu__cat"><h4>Makarnalar</h4><p>Napoletana, bolognese, arrabbiata, fettucini</p></div>
+      <div class="menu__cat"><h4>Pizzalar</h4><p>Margarita, vegetarian, hawai, mariana, chicken, karışık, bacon, mantarlı, ton balıklı</p></div>
+      <div class="menu__cat"><h4>Türk Pideleri</h4><p>Kıymalı, kıymalı kaşarlı, karışık, kuşbaşılı, kaşarlı, sebzeli pide · lahmacun</p></div>
+      <div class="menu__cat"><h4>Vejetaryen</h4><p>Sebzeli makarna, vejetaryen güveç, sebzeli curry, ızgara sebze</p></div>
+      <div class="menu__cat"><h4>Bar &amp; İçecek</h4><p>Şarap, bira, yerli içkiler, alkolsüz kokteyl, taze meyve suyu, çay &amp; kahve, soğuk içecekler</p></div>
     </div>
-
     <p class="menu__note">Menümüz sezona göre güncellenir · Vejetaryen ve glutensiz seçenekler için ekibimize sorabilirsiniz · Güncel fiyatlar için mekânımızdaki menüye bakınız.</p>
   </div>
 </section>
