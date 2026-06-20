@@ -5,8 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 <title>Satsuma Beach · Gümbet, Bodrum · Denize sıfır beach &amp; bar</title>
 <meta name="description" content="Gümbet'in kumsalında bir gün — sabah denizden, gece son şarkıya. Şezlong, kabana, akdeniz mutfağı ve gece 04:00'a uzayan bir bar. Her gün açık · 09:00 — 04:00."/>
+<meta name="robots" content="index, follow, max-image-preview:large"/>
+<meta name="author" content="Satsuma Beach"/>
+<meta name="geo.placename" content="Gümbet, Bodrum"/>
+<meta name="geo.position" content="37.0367;27.4072"/>
+<meta name="geo.region" content="TR-48"/>
+<link rel="canonical" href="https://satsumabeach.com/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Satsuma Beach"/>
+<meta property="og:locale" content="tr_TR"/>
+<meta property="og:url" content="https://satsumabeach.com/"/>
 <meta property="og:title" content="Satsuma Beach · Gümbet, Bodrum"/>
 <meta property="og:description" content="Denize sıfır kumsal · Akdeniz mutfağı · 04:00'a uzayan gece"/>
+<meta property="og:image" content="https://satsumabeach.com/images/amb-tabela.jpg"/>
+<meta property="og:image:alt" content="Satsuma Beach Gümbet kumsalı"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Satsuma Beach · Gümbet, Bodrum"/>
+<meta name="twitter:description" content="Denize sıfır kumsal · Akdeniz mutfağı · 04:00'a uzayan gece"/>
+<meta name="twitter:image" content="https://satsumabeach.com/images/amb-tabela.jpg"/>
 <meta name="theme-color" content="#0e2640"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -16,10 +32,18 @@
   "@context": "https://schema.org",
   "@type": "Restaurant",
   "name": "Satsuma Beach",
-  "image": "images/amb-tabela.jpg",
+  "url": "https://satsumabeach.com/",
+  "image": "https://satsumabeach.com/images/amb-tabela.jpg",
   "servesCuisine": ["Mediterranean", "Italian", "Turkish", "Beach Bar"],
   "priceRange": "₺₺₺",
+  "acceptsReservations": true,
+  "hasMenu": "https://satsumabeach.com/#menu",
   "telephone": "+90 533 578 23 43",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 37.0367,
+    "longitude": 27.4072
+  },
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Gümbet, Ethem Kaptan Sk. No:10",
@@ -307,9 +331,47 @@ section { padding: clamp(80px, 13vw, 150px) 0; }
   .bar__inner { font-size: .68rem; gap: 8px; }
 }
 @media (prefers-reduced-motion: reduce) { *, ::before, ::after { transition: none !important; animation: none !important; } }
+
+/* ─── Accessibility ────────────────────────────────── */
+.skip-link { position: fixed; top: -60px; left: 16px; z-index: 999; background: var(--tangerine); color: #fff; padding: 12px 22px; border-radius: 999px; font-size: .82rem; font-weight: 500; letter-spacing: .08em; text-decoration: none; transition: top .2s ease; }
+.skip-link:focus { top: 16px; }
+:focus-visible { outline: 3px solid var(--tangerine); outline-offset: 3px; border-radius: 4px; }
+[id="top"]:focus { outline: none; }
+
+/* ─── Reservation ──────────────────────────────────── */
+.resv { background: var(--navy); color: var(--shell); position: relative; overflow: hidden; }
+.resv::before { content: ""; position: absolute; top: -30%; right: -10%; width: 60vw; height: 60vw; max-width: 760px; max-height: 760px; background: radial-gradient(circle, rgba(238,119,50,.22), transparent 62%); pointer-events: none; }
+.resv__grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 64px; align-items: start; position: relative; }
+.resv__intro .eyebrow { font-size: .72rem; letter-spacing: .36em; text-transform: uppercase; color: var(--sun); margin: 0 0 20px; }
+.resv__intro h2 { font-family: var(--f-display); font-weight: 400; font-size: clamp(2.3rem, 5vw, 3.8rem); line-height: 1.06; margin: 0 0 20px; color: var(--shell); }
+.resv__intro h2 em { font-family: var(--f-script); font-style: italic; color: var(--sun); }
+.resv__intro p { color: rgba(245,236,214,.74); max-width: 440px; font-size: 1.02rem; }
+.resv__form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 18px; margin-top: 36px; }
+.resv__field { display: flex; flex-direction: column; gap: 8px; }
+.resv__field.full { grid-column: 1 / -1; }
+.resv__field label { font-size: .68rem; letter-spacing: .22em; text-transform: uppercase; color: var(--sun); }
+.resv__field input, .resv__field select { font-family: var(--f-body); font-size: 1rem; color: var(--shell); background: rgba(245,236,214,.06); border: 1px solid rgba(245,236,214,.20); border-radius: 12px; padding: 14px 16px; transition: border-color .2s ease, background .2s ease; appearance: none; }
+.resv__field input::placeholder { color: rgba(245,236,214,.4); }
+.resv__field input:focus, .resv__field select:focus { outline: none; border-color: var(--tangerine); background: rgba(245,236,214,.10); }
+.resv__field select option { color: #0e2640; }
+.resv__field input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(1); opacity: .55; cursor: pointer; }
+.resv__submit { grid-column: 1 / -1; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 6px; }
+.resv__submit .btn { border: none; cursor: pointer; font-family: var(--f-body); }
+.resv__note { font-size: .82rem; color: rgba(245,236,214,.55); }
+.resv__aside { background: rgba(245,236,214,.05); border: 1px solid rgba(245,236,214,.14); border-radius: 18px; padding: 32px 30px; }
+.resv__aside h4 { font-family: var(--f-display); font-weight: 400; font-size: 1.7rem; margin: 0 0 4px; color: var(--shell); }
+.resv__aside > small { display: block; font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--sun); margin-bottom: 22px; }
+.resv__aside dl { margin: 0; display: grid; gap: 16px; }
+.resv__aside dt { font-size: .64rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(245,236,214,.5); margin-bottom: 3px; }
+.resv__aside dd { margin: 0; font-family: var(--f-display); font-size: 1.2rem; color: var(--shell); }
+.resv__aside dd small { display: block; font-family: var(--f-body); font-size: .8rem; color: rgba(245,236,214,.55); margin-top: 2px; }
+@media (max-width: 860px) { .resv__grid { grid-template-columns: 1fr; gap: 44px; } }
+@media (max-width: 480px) { .resv__form { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
+
+<a class="skip-link" href="#top">İçeriğe geç</a>
 
 <!-- Utility bar -->
 <div class="bar">
@@ -338,13 +400,13 @@ section { padding: clamp(80px, 13vw, 150px) 0; }
           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
         </svg>
       </a>
-      <a class="nav__cta" href="https://wa.me/905335782343" target="_blank" rel="noopener">Rezervasyon</a>
+      <a class="nav__cta" href="#rezervasyon">Rezervasyon</a>
     </div>
   </div>
 </header>
 
 <!-- Hero -->
-<section class="hero" id="top">
+<section class="hero" id="top" tabindex="-1">
   <div class="hero__bg" aria-hidden="true"></div>
   <div class="wrap hero__inner">
     <p class="hero__eyebrow"><span class="dot"></span> Gümbet · Ethem Kaptan · Denize Sıfır Beach &amp; Bar</p>
@@ -662,17 +724,17 @@ c69 21 69 20 29 117 -69 172 -88 313 -52 385 21 41 74 99 91 99 20 0 28 -86
       <p class="menu__chef-since">Since 1992</p>
       <p class="menu__chef-slogan">Good Food · Good Company · Good Price</p>
     </div>
-    <div class="menu__tabs" role="tablist">
-      <button class="menu__tab is-active" data-tab="kahvalti" role="tab" aria-selected="true">Kahvaltılıklar</button>
-      <button class="menu__tab" data-tab="baslangic" role="tab" aria-selected="false">Başlangıç &amp; Salata</button>
-      <button class="menu__tab" data-tab="ana" role="tab" aria-selected="false">Ana Yemekler</button>
-      <button class="menu__tab" data-tab="italyan" role="tab" aria-selected="false">İtalyan</button>
-      <button class="menu__tab" data-tab="pide" role="tab" aria-selected="false">Pide &amp; Lahmacun</button>
-      <button class="menu__tab" data-tab="vejetaryen" role="tab" aria-selected="false">Vejetaryen</button>
-      <button class="menu__tab" data-tab="icecek" role="tab" aria-selected="false">İçecekler</button>
+    <div class="menu__tabs" role="tablist" aria-label="Menü kategorileri">
+      <button class="menu__tab is-active" data-tab="kahvalti" id="tab-kahvalti" role="tab" aria-selected="true" aria-controls="panel-kahvalti">Kahvaltılıklar</button>
+      <button class="menu__tab" data-tab="baslangic" id="tab-baslangic" role="tab" aria-selected="false" aria-controls="panel-baslangic" tabindex="-1">Başlangıç &amp; Salata</button>
+      <button class="menu__tab" data-tab="ana" id="tab-ana" role="tab" aria-selected="false" aria-controls="panel-ana" tabindex="-1">Ana Yemekler</button>
+      <button class="menu__tab" data-tab="italyan" id="tab-italyan" role="tab" aria-selected="false" aria-controls="panel-italyan" tabindex="-1">İtalyan</button>
+      <button class="menu__tab" data-tab="pide" id="tab-pide" role="tab" aria-selected="false" aria-controls="panel-pide" tabindex="-1">Pide &amp; Lahmacun</button>
+      <button class="menu__tab" data-tab="vejetaryen" id="tab-vejetaryen" role="tab" aria-selected="false" aria-controls="panel-vejetaryen" tabindex="-1">Vejetaryen</button>
+      <button class="menu__tab" data-tab="icecek" id="tab-icecek" role="tab" aria-selected="false" aria-controls="panel-icecek" tabindex="-1">İçecekler</button>
     </div>
 
-    <div class="menu__panel is-active" data-panel="kahvalti">
+    <div class="menu__panel is-active" data-panel="kahvalti" id="panel-kahvalti" role="tabpanel" aria-labelledby="tab-kahvalti" tabindex="0">
       <div class="menu__cat">
         <h4>Kahvaltı</h4>
         <ul>
@@ -715,7 +777,7 @@ c69 21 69 20 29 117 -69 172 -88 313 -52 385 21 41 74 99 91 99 20 0 28 -86
       </div>
     </div>
 
-    <div class="menu__panel" data-panel="baslangic">
+    <div class="menu__panel" data-panel="baslangic" id="panel-baslangic" role="tabpanel" aria-labelledby="tab-baslangic" tabindex="0">
       <div class="menu__cat">
         <h4>Başlangıçlar</h4>
         <ul>
@@ -740,7 +802,7 @@ c69 21 69 20 29 117 -69 172 -88 313 -52 385 21 41 74 99 91 99 20 0 28 -86
       </div>
     </div>
 
-    <div class="menu__panel" data-panel="ana">
+    <div class="menu__panel" data-panel="ana" id="panel-ana" role="tabpanel" aria-labelledby="tab-ana" tabindex="0">
       <div class="menu__cat">
         <h4>Burgerler</h4>
         <ul>
@@ -809,7 +871,7 @@ c69 21 69 20 29 117 -69 172 -88 313 -52 385 21 41 74 99 91 99 20 0 28 -86
       </div>
     </div>
 
-    <div class="menu__panel" data-panel="italyan">
+    <div class="menu__panel" data-panel="italyan" id="panel-italyan" role="tabpanel" aria-labelledby="tab-italyan" tabindex="0">
       <div class="menu__cat">
         <h4>Makarnalar</h4>
         <ul>
@@ -835,7 +897,7 @@ c69 21 69 20 29 117 -69 172 -88 313 -52 385 21 41 74 99 91 99 20 0 28 -86
       </div>
     </div>
 
-    <div class="menu__panel" data-panel="pide">
+    <div class="menu__panel" data-panel="pide" id="panel-pide" role="tabpanel" aria-labelledby="tab-pide" tabindex="0">
       <div class="menu__cat">
         <h4>Türk Pideleri</h4>
         <ul>
@@ -850,7 +912,7 @@ c69 21 69 20 29 117 -69 172 -88 313 -52 385 21 41 74 99 91 99 20 0 28 -86
       </div>
     </div>
 
-    <div class="menu__panel" data-panel="vejetaryen">
+    <div class="menu__panel" data-panel="vejetaryen" id="panel-vejetaryen" role="tabpanel" aria-labelledby="tab-vejetaryen" tabindex="0">
       <div class="menu__cat">
         <h4>Vejetaryen</h4>
         <ul>
@@ -862,7 +924,7 @@ c69 21 69 20 29 117 -69 172 -88 313 -52 385 21 41 74 99 91 99 20 0 28 -86
       </div>
     </div>
 
-    <div class="menu__panel" data-panel="icecek">
+    <div class="menu__panel" data-panel="icecek" id="panel-icecek" role="tabpanel" aria-labelledby="tab-icecek" tabindex="0">
       <div class="menu__cat">
         <h4>Bar &amp; İçecek</h4>
         <ul>
@@ -931,6 +993,73 @@ c69 21 69 20 29 117 -69 172 -88 313 -52 385 21 41 74 99 91 99 20 0 28 -86
 </section>
 
 <!-- Visit -->
+<!-- Reservation -->
+<section class="resv" id="rezervasyon">
+  <div class="wrap resv__grid">
+    <div class="resv__intro reveal">
+      <span class="eyebrow">Rezervasyon</span>
+      <h2>Yerinizi <em>ayırtın,</em><br/>gerisini bize bırakın.</h2>
+      <p>Birkaç satır doldurun; talebiniz hazır bir mesaj olarak WhatsApp hattımıza düşsün. Ortalama 30 dakikada onaylıyoruz.</p>
+      <form class="resv__form" id="resvForm" novalidate>
+        <div class="resv__field">
+          <label for="rv-name">Ad Soyad</label>
+          <input id="rv-name" name="name" type="text" placeholder="Adınız" autocomplete="name" required />
+        </div>
+        <div class="resv__field">
+          <label for="rv-phone">Telefon</label>
+          <input id="rv-phone" name="phone" type="tel" placeholder="05xx xxx xx xx" autocomplete="tel" required />
+        </div>
+        <div class="resv__field">
+          <label for="rv-date">Tarih</label>
+          <input id="rv-date" name="date" type="date" required />
+        </div>
+        <div class="resv__field">
+          <label for="rv-time">Saat</label>
+          <select id="rv-time" name="time" required>
+            <option value="" disabled selected>Seçin</option>
+            <option>10:00</option><option>12:00</option><option>14:00</option>
+            <option>16:00</option><option>18:00</option><option>20:00</option>
+            <option>22:00</option><option>00:00</option>
+          </select>
+        </div>
+        <div class="resv__field">
+          <label for="rv-guests">Kişi</label>
+          <select id="rv-guests" name="guests" required>
+            <option value="" disabled selected>Seçin</option>
+            <option>1 kişi</option><option>2 kişi</option><option>3 kişi</option>
+            <option>4 kişi</option><option>5 kişi</option><option>6 kişi</option>
+            <option>7+ kişi</option>
+          </select>
+        </div>
+        <div class="resv__field">
+          <label for="rv-area">Alan</label>
+          <select id="rv-area" name="area" required>
+            <option value="" disabled selected>Seçin</option>
+            <option>Şezlong / Plaj</option>
+            <option>Kabana</option>
+            <option>Restoran masası</option>
+            <option>Bar</option>
+          </select>
+        </div>
+        <div class="resv__submit">
+          <button class="btn btn-primary" type="submit">WhatsApp ile Gönder</button>
+          <span class="resv__note">Onay için sizi ararız · iptal ücretsiz</span>
+        </div>
+      </form>
+    </div>
+    <aside class="resv__aside reveal">
+      <h4>Satsuma Beach</h4>
+      <small>Gümbet Koyu · Bodrum</small>
+      <dl>
+        <div><dt>Saatler</dt><dd>09:00 — 04:00<small>Her gün · mutfak 23:30'a kadar</small></dd></div>
+        <div><dt>Sezon</dt><dd>Mayıs — Ekim<small>Hava şartlarına göre</small></dd></div>
+        <div><dt>Hızlı hat</dt><dd>0533 578 23 43<small>WhatsApp · ort. 30 dk yanıt</small></dd></div>
+        <div><dt>Konum</dt><dd>Ethem Kaptan Sk.<small>Gümbet, 48400 Bodrum</small></dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
 <section class="visit" id="ziyaret">
   <div class="wrap visit__grid">
     <div class="visit__copy reveal">
@@ -1017,19 +1146,55 @@ const io = new IntersectionObserver((es) => {
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
 // Menü sekmeleri
-document.querySelectorAll('.menu__tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    const target = tab.dataset.tab;
-    document.querySelectorAll('.menu__tab').forEach(t => {
-      const on = t === tab;
-      t.classList.toggle('is-active', on);
-      t.setAttribute('aria-selected', on ? 'true' : 'false');
-    });
-    document.querySelectorAll('.menu__panel').forEach(p => {
-      p.classList.toggle('is-active', p.dataset.panel === target);
-    });
+const menuTabs = Array.from(document.querySelectorAll('.menu__tab'));
+function activateTab(tab, focus) {
+  const target = tab.dataset.tab;
+  menuTabs.forEach(t => {
+    const on = t === tab;
+    t.classList.toggle('is-active', on);
+    t.setAttribute('aria-selected', on ? 'true' : 'false');
+    t.tabIndex = on ? 0 : -1;
+  });
+  document.querySelectorAll('.menu__panel').forEach(p => {
+    p.classList.toggle('is-active', p.dataset.panel === target);
+  });
+  if (focus) tab.focus();
+}
+menuTabs.forEach((tab, i) => {
+  tab.addEventListener('click', () => activateTab(tab, false));
+  tab.addEventListener('keydown', (e) => {
+    let ni = null;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') ni = (i + 1) % menuTabs.length;
+    else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') ni = (i - 1 + menuTabs.length) % menuTabs.length;
+    else if (e.key === 'Home') ni = 0;
+    else if (e.key === 'End') ni = menuTabs.length - 1;
+    if (ni !== null) { e.preventDefault(); activateTab(menuTabs[ni], true); }
   });
 });
+
+// Rezervasyon formu -> WhatsApp hazır mesaj
+const resvForm = document.getElementById('resvForm');
+if (resvForm) {
+  const dateInput = document.getElementById('rv-date');
+  if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
+  resvForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!resvForm.reportValidity()) return;
+    const v = (id) => document.getElementById(id).value.trim();
+    const name = v('rv-name'), phone = v('rv-phone');
+    const date = v('rv-date'), time = v('rv-time');
+    const guests = v('rv-guests'), area = v('rv-area');
+    const d = date ? new Date(date + 'T00:00').toLocaleDateString('tr-TR',
+      { day: 'numeric', month: 'long', weekday: 'long' }) : date;
+    const msg =
+      `Merhaba Satsuma Beach 🌅 Rezervasyon talebim:\n\n` +
+      `• İsim: ${name}\n• Telefon: ${phone}\n• Tarih: ${d}\n` +
+      `• Saat: ${time}\n• Kişi: ${guests}\n• Alan: ${area}\n\n` +
+      `Uygunluğu teyit edebilir misiniz?`;
+    window.open('https://wa.me/905335782343?text=' + encodeURIComponent(msg),
+      '_blank', 'noopener');
+  });
+}
 </script>
 </body>
 </html>
